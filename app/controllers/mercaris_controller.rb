@@ -1,0 +1,2 @@
+class MercarisController < ApplicationController
+end
