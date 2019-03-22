@@ -1,5 +1,30 @@
-.pickup-container h2 {
-    font-size: 22px;
+.pickup-container {
+    background-color:$light-gray;
     text-align: center;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+  .pickup-head {
+    font-size: 28px;
+    font-weight: 800;
+    color:$black;
+    padding-top: 40px;
+  }
+
+  .item-boxs {
+    h3{
+      letter-spacing: 2px;
+      margin: 25px;
+      font-size: 22px;
+      font-weight: 800;
+      a {
+        text-decoration: none;
+        color: $light-blue;
+      }
+    }
+  }
+
+
+
 }
 
