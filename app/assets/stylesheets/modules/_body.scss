@@ -1,8 +1,8 @@
 .pickup-container {
-    background-color:$light-gray;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 40px;
+  background-color:$light-gray;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 40px;
 
   .pickup-head {
     font-size: 28px;
@@ -10,21 +10,75 @@
     color:$black;
     padding-top: 40px;
   }
-
-  .item-boxs {
-    h3{
-      letter-spacing: 2px;
-      margin: 25px;
-      font-size: 22px;
-      font-weight: 800;
-      a {
-        text-decoration: none;
-        color: $light-blue;
-      }
+  h3{
+    letter-spacing: 2px;
+    margin: 25px;
+    font-size: 22px;
+    font-weight: 800;
+    a {
+      text-decoration: none;
+      color: $light-blue;
     }
   }
-
-
-
+  .items-box-container {
+    ul{
+      margin:0 auto;
+      width: 932px;
+    }
+    .items-box-content{
+      display: inline-block;
+      margin-left: 15px;
+      height:330px;
+      width:213px;
+      background-color: white;
+      text-align: left;
+    }
+    a {
+      text-decoration: none;
+      color: #333333;
+      img {
+        position: absolute;
+        width:213px;
+        height:220px;
+        object-fit: cover;
+      }
+    }
+      .item-box {
+        position: absolute;
+        bottom:0;
+        width:181px;
+        height: 78px;
+        padding: 16px;
+        .item-box-name {
+          position: relative;
+          height: 3em;
+          line-height: 1.5;
+          overflow: hidden;
+          h4 {
+              font-size: 16px;
+              font-weight: 400;
+              word-wrap: break-word;
+          }
+        }
+        .price {
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          font-size:20px;
+          font-weight: 400;
+        }
+        .price-tax {
+          position: absolute;
+          bottom: 9px;
+          left: 16px;
+          font-size:10px;
+        }
+        .nice {
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+          font-size:16px;
+        }
+      }
+    }
 }
-
