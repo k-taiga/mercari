@@ -56,7 +56,7 @@
             }
           }
           .item-box__num{
-            .price {
+            &__price {
               font-size:15px;
               font-weight: bold;
               .nice {
@@ -70,7 +70,7 @@
                 }
               }
             }
-            .price-tax {
+            &__price-tax {
               font-size: 10px;
               height:10px;
             }
