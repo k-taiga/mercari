@@ -20,65 +20,76 @@
       color: $light-blue;
     }
   }
-  .items-box-container {
+  .item-boxs{
     ul{
       margin:0 auto;
       width: 932px;
-    }
-    .items-box-content{
-      display: inline-block;
-      margin-left: 15px;
-      height:330px;
-      width:213px;
-      background-color: white;
-      text-align: left;
-    }
-    a {
-      text-decoration: none;
-      color: #333333;
-      img {
-        position: absolute;
+      .item-box{
+        display: inline-block;
+        margin-left: 15px;
+        height:330px;
         width:213px;
-        height:220px;
-        object-fit: cover;
-      }
-    }
-      .item-box {
-        position: absolute;
-        bottom:0;
-        width:181px;
-        height: 78px;
-        padding: 16px;
-        .item-box-name {
-          position: relative;
-          height: 3em;
-          line-height: 1.5;
-          overflow: hidden;
-          h4 {
+        background-color: white;
+        text-align: left;
+        a {
+          text-decoration: none;
+          display:block;
+          color: #333333;
+          img {
+          // position: absolute;
+          width:213px;
+          height:220px;
+          object-fit: cover;
+        }
+        .item-box__body {
+          width:181px;
+          height: 78px;
+          padding: 16px;
+          .item-box__text {
+            height: 3em;
+            line-height: 1.5;
+            overflow: hidden;
+            h4 {
               font-size: 16px;
               font-weight: 400;
               word-wrap: break-word;
+            }
           }
-        }
-        .price {
-          position: absolute;
-          bottom: 16px;
-          left: 16px;
-          font-size:20px;
-          font-weight: 400;
-        }
-        .price-tax {
-          position: absolute;
-          bottom: 9px;
-          left: 16px;
-          font-size:10px;
-        }
-        .nice {
-          position: absolute;
-          bottom: 16px;
-          right: 16px;
-          font-size:16px;
+          .item-box__num{
+            .price {
+              font-size:15px;
+              font-weight: bold;
+              .nice {
+                float:right;
+                .icon-like-border {
+                  font-size:16px;
+                  color: #ccc;
+                }
+                span {
+                  font-size:13px;
+                }
+              }
+            }
+            .price-tax {
+              font-size: 10px;
+              height:10px;
+            }
+          }
         }
       }
     }
+  }
+  }
+  .view-all {
+    clear:both;
+    padding: 20px 0 30px;
+    margin:0 auto;
+    width: 932px;
+    text-align: right;
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #0099E8;
+    }
+  }
 }
