@@ -26,7 +26,7 @@
 * has_one :address
 * has_many :sns_credentials
 
-## user_evalution
+## user_evaluation
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key|
@@ -36,7 +36,7 @@
 * has_many :user
 * has_many :evaluation
 
-## evalution
+## evaluation
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
@@ -55,7 +55,7 @@
 ## Association
 * belongs_to :user
 
-##credit
+## credit
 |Column|Type|Options|
 |------|----|-------|
 |card_number|string|null: false, unique: true|
@@ -84,7 +84,7 @@
 ## Association
 * belongs_to :user
 
-##comment
+## comment
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key|
