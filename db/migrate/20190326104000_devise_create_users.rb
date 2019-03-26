@@ -11,9 +11,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.integer :birth_year,        null: false
       t.integer :birth_month,       null: false
       t.integer :birth_day,         null: false
-      t.text    :icon_picture,
-      t.text    :profile,
-      t.text    :background_image,
+      t.text    :icon_picture
+      t.text    :profile
+      t.text    :background_image
       t.integer :point
 
       ## Recoverable
