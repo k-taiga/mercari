@@ -1,0 +1,26 @@
+a.footer-sell-btn {
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  background: #ea352d;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 50%;
+
+  div {
+    margin: 32px 0 0;
+    display: block;
+  }
+
+  i.fas.fa-camera {
+    font-size: 60px;
+    display: inline-block;
+    font-variant: normal;
+    line-height: 1;
+  }
+}
