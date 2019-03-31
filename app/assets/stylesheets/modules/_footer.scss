@@ -159,14 +159,14 @@ footer.global-footer {
             line-height: 1;
             margin: 25px 18px 0 0;
 
-            a {
+            i.fab {
             color: $white;
             font-size: 30px;
             background: transparent;
             }
 
-            a:hover {
-              text-decoration: underline;
+            i:hover {
+              text-decoration: none;
             }
           }
         }
@@ -205,13 +205,12 @@ footer.global-footer {
   }
 
     div.footer-bottom {
-      margin: 30px auto 20px;
+      margin: 30px 10px 0 190px;
       width: 1020px;
 
-      a.footer-logo {
-        img {
-          vertical-align: middle;
-        }
+      .footer-logo {
+        vertical-align: middle;
+        display: inline-block;
 
         img:hover {
           opacity: 0.75;
