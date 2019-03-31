@@ -1,4 +1,4 @@
-a.footer-sell-btn {
+.footer-sell-btn {
   bottom: 32px;
   right: 32px;
   width: 160px;
@@ -6,21 +6,26 @@ a.footer-sell-btn {
   font-size: 22px;
   position: fixed;
   background: #ea352d;
-  color: $white;
   text-align: center;
-  text-decoration: none;
   z-index: 1000;
   border-radius: 50%;
 
+  a {
+    text-decoration: none;
+  }
+
   div {
+    color: $white;
     margin: 32px 0 0;
     display: block;
   }
 
   i.fas.fa-camera {
+    color: $white;
     font-size: 60px;
     display: inline-block;
     font-variant: normal;
     line-height: 1;
+    decoration: none;
   }
 }
