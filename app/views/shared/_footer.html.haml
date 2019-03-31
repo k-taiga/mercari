@@ -5,16 +5,16 @@
       %p 今すぐ無料ダウンロード！
       .app-banner-icon.clearfix
         %figure
-          %img{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1313722577", :width => "68"}/
+          = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1313722577', width: 68
         %ul.clearfix
           %li
-            %a{:href => "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", :target => "_blank"}
-              %img{:alt => "", :height => "40", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?1313722577", :width => "133"}/
+            = link_to 'https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8', target: '_blank' do
+              = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?1313722577', width: 133 ,height: 40
           %li
-            %a{:href => "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", :target => "_blank"}
-              %img{:alt => "", :height => "40", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1313722577", :width => "133"}/
+            = link_to 'https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja', target: '_blank' do
+              = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1313722577', width: 133 ,height: 40
     %figure
-      %img{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1313722577"}/
+      = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1313722577'
 %footer.global-footer
   %nav.clearfix
     .footer-cell
@@ -22,76 +22,77 @@
         メルカリについて
       %ul
         %li
-          %a{:href => ""} 会社概要（運営会社）
+          = link_to "会社概要（運営会社）"
         %li
-          %a{:href => ""} 採用情報
+          = link_to "採用情報"
         %li
-          %a{:href => ""} プレスリリース
+          = link_to "プレスリリース"
         %li
-          %a{:href => "", :target => ""} 公式ブログ
+          = link_to "公式ブログ"
         %li
-          %a{:href => ""} メルカリロゴ利用ガイドライン
+          = link_to "メルカリロゴ利用ガイドライン"
         %li.footer-social-link
-          %a{:href => "https://twitter.com/Ilovfcsnd", :target => ""}
+          = link_to do
             %i.fab.fa-twitter
         %li.footer-social-link
-          %a{:href => "https://www.facebook.com/profile.php?id=100009037160238", :target => ""}
+          = link_to do
             %i.fab.fa-facebook
     .footer-cell
       %h2.footer-head
         ヘルプ＆ガイド
       %ul
         %li
-          %a{:href => ""} メルカリガイド
+          = link_to "メルカリガイド"
         %li
-          %a{:href => ""} らくらくメルカリ便
+          = link_to "らくらくメルカリ便"
         %li
-          %a{:href => ""} ゆうゆうメルカリ便
+          = link_to "ゆうゆうメルカリ便"
         %li
-          %a{:href => ""} 大型メルカリ便
+          = link_to "大型メルカリ便"
         %li
-          %a{:href => ""} 車体取引ガイド
+          = link_to "車体取引ガイド"
         %li
-          %a{:href => "", :target => ""} メルカリあんしん・あんぜん宣言！
+          = link_to "メルカリあんしん・あんぜん宣言！"
         %li
-          %a{:href => ""} 偽ブランド品撲滅への取り組み
+          = link_to "偽ブランド品撲滅への取り組み"
         %li
-          %a{:href => ""} メルカリボックス
+          = link_to "メルカリボックス"
     .footer-cell.full-width
       %h2.footer-head プライバシーと利用規約
       .inner-footer-cell
         %ul
           %li
-            %a{:href => ""} プライバシーポリシー
+            = link_to "プライバシーポリシー"
           %li
-            %a{:href => ""} メルカリ利用規約
+            = link_to "メルカリ利用規約"
           %li
-            %a{:href => ""} メルカリ利用規約・有償ポイントに関する特約
+            = link_to "メルカリ利用規約・有償ポイントに関する特約"
           %li
-            %a{:href => ""} あんしんスマホサポート制度に関する利用特約
+            = link_to "あんしんスマホサポート制度に関する利用特約"
           %li
-            %a{:href => ""} コンプライアンスポリシー
+            = link_to "コンプライアンスポリシー"
       .inner-footer-cell-left
         %ul
           %li
-            %a{:href => ""} 個人データの安全管理に係る基本方針
+            = link_to "個人データの安全管理に係る基本方針"
           %li
-            %a{:href => ""} 特定商取引に関する表記
+            = link_to "特定商取引に関する表記"
           %li
-            %a{:href => ""} 資金決済法に基づく表示
+            = link_to "資金決済法に基づく表示"
           %li
-            %a{:href => ""} 法令順守と犯罪抑止のために
+            = link_to "法令順守と犯罪抑止のために"
           %li
-            %a{:href => ""} 返品・返金ポリシー
+            = link_to "返品・返金ポリシー"
     .footer-cell.footer-nav-lang
       %h2.footer-head 国
       %ul
         %li
-          %a.active{:href => ""} 日本
+          = link_to "日本"
         %li
-          %a{:href => ""} United States
+          = link_to "United States"
   .footer-bottom
-    %a.footer-logo{:href => ""}
-      %img{:alt => "mercari", :height => "33", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?3112359103", :width => "124"}/
+    .footer-logo
+      = link_to do
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?3112359103', width: 124, height: 33
     %span.footer-copyright
       %small © 2019 Mercari
