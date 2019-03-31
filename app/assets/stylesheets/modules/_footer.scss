@@ -6,7 +6,7 @@ aside.app-banner {
   background-position: center;
   background-size: cover;
 
-  div.app-banner-pc {
+  .app-banner-pc {
     width: 750px;
     height: 260px;
     margin: 0 auto;
@@ -15,7 +15,7 @@ aside.app-banner {
     position: relative;
     overflow: hidden;
 
-    div.app-banner-pc-inner {
+    .app-banner-pc-inner {
       width: 420px;
       height: 166px;
       position: absolute;
@@ -36,7 +36,7 @@ aside.app-banner {
         margin: 0 0 35px 0;
       }
 
-      div.app-banner-icon {
+      .app-banner-icon {
         height: 68px;
         width: 420px;
         margin: 20px 0 0;
@@ -119,7 +119,7 @@ footer.global-footer {
       padding: 0 10px 0 0;
     }
 
-    div.footer-cell {
+    .footer-cell {
       width: 60%;
       float: left;
       margin-top: 18px;
@@ -172,7 +172,7 @@ footer.global-footer {
         }
     }
 
-    div.footer-cell.full-width {
+    .footer-cell.full-width {
       margin-top: 18px;
       padding: 0 40px 0 0;
       width: 800px;
@@ -197,14 +197,14 @@ footer.global-footer {
         }
     }
 
-    div.footer-cell.footer-nav-lang {
+    .footer-cell.footer-nav-lang {
       height: 88px;
       width: 30%;
       padding: 0;
     }
   }
 
-    div.footer-bottom {
+    .footer-bottom {
       margin: 30px 10px 0 190px;
       width: 1020px;
 
