@@ -1,0 +1,231 @@
+aside.app-banner {
+  height: 260px;
+  width: 1440px;
+  display: block;
+  background:url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?29317448);
+  background-position: center;
+  background-size: cover;
+
+  .app-banner-pc {
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: $white;
+    margin: 0 345px;
+    position: relative;
+    overflow: hidden;
+
+    .app-banner-pc-inner {
+      width: 420px;
+      height: 166px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      h2 {
+        font-size: 24px;
+        line-height: 1.4;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-weight: bold;
+      }
+
+      p {
+        height: 35px;
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        margin: 0 0 35px 0;
+      }
+
+      .app-banner-icon {
+        height: 68px;
+        width: 420px;
+        margin: 20px 0 0;
+
+        figure {
+          height: 68px;
+          width: 68px;
+          left: 0;
+
+          img {
+            height: 68px;
+            width: 68px;
+            vertical-align: middle;
+          }
+        }
+
+        ul.clearfix {
+          width: 282px;
+          float: left;
+          margin: 0 0 0 92px;
+          line-height: 68px;
+
+
+          li:last-child {
+            margin: 0 0 0 16px;
+          }
+
+          li {
+            float: left;
+
+            a {
+              height: 68px;
+
+              img {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    figure {
+      position: absolute;
+      right: 0;
+      width: 300px;
+      height: 260px;
+      margin: 0;
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+footer.global-footer {
+  height: 391px;
+  width: 1440px;
+  padding: 0 20px 10px 20px;
+  background: #212121;
+  color: $white;
+  border-style: solid;
+  border-width: 0;
+  font-size: 14px;
+  line-height: 1;
+  box-sizing: border-box;
+  display: block;
+
+  .clearfix {
+    width: 1020px;
+    height: 298px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+
+    .footer-cell:first-child {
+      height: 241px;
+      padding: 0 10px 0 0;
+    }
+
+    .footer-cell {
+      width: 60%;
+      float: left;
+      margin-top: 18px;
+      padding: 0 10px 0 0;
+
+      h2 {
+        line-height: 1.4;
+      }
+
+      h2.footer-head {
+        color: $white;
+        font-size: 16px;
+        font-weight: 100;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin: 16px 0 0;
+
+          a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 11.5px;
+            line-height: 1.5em;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+
+          li.footer-social-link {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1;
+            margin: 25px 18px 0 0;
+
+            i.fab {
+            color: $white;
+            font-size: 30px;
+            background: transparent;
+            }
+
+            i:hover {
+              text-decoration: none;
+            }
+          }
+        }
+    }
+
+    .footer-cell.full-width {
+      margin-top: 18px;
+      padding: 0 40px 0 0;
+      width: 800px;
+      height: 220px;
+
+      h2.footer-head {
+        width: 388.39px;
+      }
+
+        .inner-footer-cell {
+          width: 178px;
+          float: left;
+          padding: 0 10px 0 0;
+        }
+
+        .inner-footer-cell-left {
+          width: 178px;
+          height: 198px;
+          clear: both;
+          padding-left: 10px;
+          display: inline-block;
+        }
+    }
+
+    .footer-cell.footer-nav-lang {
+      height: 88px;
+      width: 30%;
+      padding: 0;
+    }
+  }
+
+    .footer-bottom {
+      margin: 30px 10px 0 190px;
+      width: 1020px;
+
+      .footer-logo {
+        vertical-align: middle;
+        display: inline-block;
+
+        img:hover {
+          opacity: 0.75;
+        }
+      }
+
+    span.footer-copyright {
+      display: inline-block;
+      margin: 8px 0 0;
+      text-align: center;
+      width: 745px;
+
+      small {
+        font-size: 10px;
+      }
+    }
+  }
+}

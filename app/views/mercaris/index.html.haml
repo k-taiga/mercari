@@ -1,16 +1,9 @@
-.main
-  .main__header
-    .header
-  .main__section
+  .main_header
+    =render partial: 'shared/header'
+  .main_header_carousel
     = render 'shared/top-carousel'
-  .main__body
-
-  .main__footer
-
-
-
-
-
-
-
-
+  %section.pickup-container
+    =render partial: 'shared/body'
+  .main_footer
+    =render partial: 'shared/footer'
+    =render partial: 'shared/sell-button'
