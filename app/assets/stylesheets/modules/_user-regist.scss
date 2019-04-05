@@ -1,0 +1,131 @@
+.ur-main{
+  display: block;
+  background: #F5F5F5;
+  .ur-section{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    display: block;
+    .ur-m-header{
+      padding: 32px 16px;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+      font-weight: bold;
+    }
+    .ur-form{
+      padding: 10px 64px 64px 64px;
+      border-top: 1px solid #f5f5f5;
+      display: block;
+      &-content{
+        max-width: 320px;
+        margin: 0 auto;
+        .ur-form-group{
+          margin:0;
+          margin: 40px 0 0;
+          display: block;
+          &__label{
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+          }
+          &__span{
+            background: #ea352d;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+          }
+          &__field{
+            width: 100%;
+            margin: 8px 0 0;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 14px;
+          }
+          &__confirm{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          &__text{
+            margin: 8px 0 0;
+            padding: 0;
+            line-height: 1.5;
+            font-size: 14px;
+          }
+          &-info-text{
+            color: #888;
+          }
+          &__center{
+            text-align: center;
+            font-size: 14px;
+            color: black;
+          }
+        .ur-form-group--blue{
+          color: #0099e8;
+          font-size: 14px
+        }
+        .ur-form-group--blue:hover {
+          text-decoration: underline;
+        }
+          &-birthday{
+            width: 140px;
+            display: block;
+            margin: 8px 0 0;
+            position: relative;
+            background: #fff;
+           &__wrap{
+            width: 140px;
+            display: inline-block;
+            margin: 8px 0 0;
+            position: relative;
+            background: #fff;
+            display: flex;
+            line-height: 50px;
+            padding-right: 10px;
+
+          &--select{
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            height: 48px;
+            padding: 0 16px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+      .ur-submit{
+        margin: 24px 0 0;
+        display: block;
+        &__btn{
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          border: 1px solid transparent;
+          cursor: pointer;
+          text-align: center;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+         }
+       }
+        &__passwordforget{
+          display: block;
+          margin: 40px 0 0;
+          color: #0099e8;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
