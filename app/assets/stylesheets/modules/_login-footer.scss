@@ -1,0 +1,64 @@
+.main-content__footer{
+    background-color: #F5F5F5;
+    width:100%;
+    padding: 40px 0;
+    text-align: center;
+
+    &-list{
+      padding:0;
+      margin: 0;
+
+      &-privacy-policy{
+        margin:0;
+        display: inline-block;
+        font-size: 12px;
+
+        .privacy{
+          display: block;
+          color: #333;
+          text-decoration: none;
+        }
+      }
+
+      &-agreement{
+        display: inline-block;
+        margin: 0 0 40px 16px;
+        font-size: 12px;
+
+        .agreement{
+          display: block;
+          color: #333;
+          text-decoration: none;
+        }
+      }
+
+      &-tokutei{
+        display: inline-block;
+        margin: 0 0 0 16px;
+        font-size: 12px;
+
+        .tokutei{
+          display: block;
+          color: #333;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .mercari-logo{
+      display: block;
+      color: #333;
+      width: 80px;
+      height: 65px;
+      margin: 0 auto;
+      text-decoration: none;
+      .mercari-logo-footer{
+        height:65px;
+        width: 80px;
+      }
+    }
+    .mercari--under-logo{
+      font-size: 12px;
+      padding: 0;
+    }
+  }
