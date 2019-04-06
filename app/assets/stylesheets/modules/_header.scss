@@ -58,6 +58,7 @@
       &__category {
         float: left;
         position: relative;
+        z-index: 99;
         &:hover ul {
           display: block;
         }
@@ -84,6 +85,7 @@
         float: left;
         padding: 0 0 0 16px;
         position: relative;
+        z-index: 99;
         &:hover ul {
           display: block;
         }
