@@ -7,27 +7,27 @@
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           = devise_error_messages!
           .ur-form-group
-            = f.label :ニックネーム , class: "ur-form-group__label"
+            = f.label :nickname, "ニックネーム" , class: "ur-form-group__label"
             %span.ur-form-group__span 必須
             = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder:"例) メルカリ太郎", class: "ur-form-group__field"
 
           .ur-form-group
-            = f.label :メールアドレス , class: "ur-form-group__label"
+            = f.label :email, "メールアドレス" , class: "ur-form-group__label"
             %span.ur-form-group__span 必須
             = f.email_field :email, autofocus: true, autocomplete: "email" , placeholder:"PC・携帯どちらでも可", class: "ur-form-group__field"
 
           .ur-form-group
-            = f.label :電話番号 , class: "ur-form-group__label"
+            = f.label :telephone, "電話番号" , class: "ur-form-group__label"
             %span.ur-form-group__span 必須
-            = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder:"携帯電話の番号を入力", class: "ur-form-group__field"
+            = f.text_field :telephone, autofocus: true, autocomplete: "nickname", placeholder:"携帯電話の番号を入力", class: "ur-form-group__field"
 
           .ur-form-group
-            = f.label :パスワード, class: "ur-form-group__label"
+            = f.label :password, "パスワード", class: "ur-form-group__label"
             %span.ur-form-group__span 必須
             - if @minimum_password_length
               = f.password_field :password, autocomplete: "new-password",placeholder:"6文字以上",class: "ur-form-group__field"
             .ur-form-group
-              = f.label :"パスワード (確認)",class: "ur-form-group__label"
+              = f.label :password_confirmation, "パスワード (確認)",class: "ur-form-group__label"
               %span.ur-form-group__span 必須
               = f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"6文字以上",class: "ur-form-group__field"
             .ur-form-group
