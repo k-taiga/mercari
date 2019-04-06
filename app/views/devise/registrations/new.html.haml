@@ -35,13 +35,13 @@
               %span.ur-form-group__span 必須
               .ur-form-group-birthday
                 .ur-form-group-birthday__wrap
-                  = f.select :birth_year,options_for_select(1900..2019), {}, { class: "ur-form-group-birthday__wrap--select" }
+                  = f.select :birth_year,options_for_select(1950..2019), {}, { class: "ur-form-group-birthday__wrap--select" }
 
                 .select-wrap.select-wrap__month
-                  = f.select :birth_year, options_for_select(1..12), {}, { class: "ur-form-group-birthday__wrap--select" }
+                  = f.select :birth_month, options_for_select(1..12), {}, { class: "ur-form-group-birthday__wrap--select" }
 
                 .select-wrap.select-wrap__day
-                  = f.select :birth_year, options_for_select(1..31), {}, { class: "ur-form-group-birthday__wrap--select" }
+                  = f.select :birth_day, options_for_select(1..31), {}, { class: "ur-form-group-birthday__wrap--select" }
 
             .ur-submit
               = f.submit "登録する", class: "ur-submit__btn"
