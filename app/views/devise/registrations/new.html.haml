@@ -1,24 +1,48 @@
 = render 'shared/user-header'
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-    = f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"PC・どちらでも可"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.ur-main
+  .ur-section
+    %h2.ur-m-header 会員情報入力
+    .ur-form
+      .ur-form-content
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .ur-form-group
+            = f.label :nickname, "ニックネーム" , class: "ur-form-group__label"
+            %span.ur-form-group__span 必須
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder:"例) メルカリ太郎", class: "ur-form-group__field"
+
+          .ur-form-group
+            = f.label :email, "メールアドレス" , class: "ur-form-group__label"
+            %span.ur-form-group__span 必須
+            = f.email_field :email, autofocus: true, autocomplete: "email" , placeholder:"PC・携帯どちらでも可", class: "ur-form-group__field"
+
+          .ur-form-group
+            = f.label :telephone, "電話番号" , class: "ur-form-group__label"
+            %span.ur-form-group__span 必須
+            = f.text_field :telephone, autofocus: true, autocomplete: "nickname", placeholder:"携帯電話の番号を入力", class: "ur-form-group__field"
+
+          .ur-form-group
+            = f.label :password, "パスワード", class: "ur-form-group__label"
+            %span.ur-form-group__span 必須
+            - if @minimum_password_length
+              = f.password_field :password, autocomplete: "new-password",placeholder:"6文字以上",class: "ur-form-group__field"
+            .ur-form-group
+              = f.label :password_confirmation, "パスワード (確認)",class: "ur-form-group__label"
+              %span.ur-form-group__span 必須
+              = f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"6文字以上",class: "ur-form-group__field"
+            .ur-form-group
+              = f.label :birth_year, "生年月日" , class: "ur-form-group__label"
+              %span.ur-form-group__span 必須
+              .ur-form-group-birthday
+                .ur-form-group-birthday__wrap
+                  = f.select :birth_year,options_for_select(1900..2019), {}, { class: "ur-form-group-birthday__wrap--select" }
+
+                .select-wrap.select-wrap__month
+                  = f.select :birth_year, options_for_select(1..12), {}, { class: "ur-form-group-birthday__wrap--select" }
+
+                .select-wrap.select-wrap__day
+                  = f.select :birth_year, options_for_select(1..31), {}, { class: "ur-form-group-birthday__wrap--select" }
+
+            .ur-submit
+              = f.submit "登録する", class: "ur-submit__btn"
 = render 'shared/login-footer'
