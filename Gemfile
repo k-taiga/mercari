@@ -72,5 +72,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem "font-awesome-rails"
-
+gem 'dotenv-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
