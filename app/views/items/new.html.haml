@@ -1,1 +1,23 @@
-= render 'shared/mercari-header'
+.single-container
+  = render 'shared/mercari-header'
+  %main.single-container__main
+    %section.single-container__main-content
+      .item
+        .item-container
+          %h2.item-container__header 商品の情報を入力
+          %form.item-container__form
+            .item-container__form-upload
+              %h3.item-container__form-upload__header
+                出品画像
+                %span.form-require
+                  必須
+              %p 最大10枚までアップロードできます
+              .item-container__form-upload__dropbox.clearfix
+                .item-container__form-upload__dropbox__content
+                  .item-container__form-upload__dropbox__content-item
+                    %ul
+                .item-container__form-upload__dropbox__zone
+                  %input{ type: "file", class: "image-drop-field", multiple: true, name: "image", style: "display: none;" }
+                  %pre.image-drop-word
+                    ドラッグアンドドロップ
+                    またはクリックしてファイルをアップロード
