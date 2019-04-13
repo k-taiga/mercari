@@ -1,6 +1,10 @@
 @import "./modules/reset";
 @import "font-awesome";
 @import "./config/variables";
+@import "./mixin/clearfix";
+@import "./mixin/btn";
+@import "./mixin/icon";
+@import "./modules/mercari-top";
 @import "./modules/body";
 @import "./modules/header";
 @import "./modules/login";
@@ -10,6 +14,7 @@
 @import "./modules/user-header";
 @import "./modules/top-carousel";
 @import "./modules/user-regist.scss";
+@import "./modules/item-new";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
