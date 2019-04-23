@@ -37,6 +37,27 @@
               float: left;
             }
           }
+          &__zone{
+            width: 100%;
+            margin: 0;
+            padding: 40px;
+            background: $light-gray;
+            border: 1px dashed $Gray;
+            min-height: 162px;
+          pre {
+            position: absolute;
+              top: 50%;
+              left: 16px;
+              right: 16px;
+              text-align: center;
+              font-size: 14px;
+              line-height: 1.5;
+              transform: translate(0, -50%);
+              pointer-events: none;
+              white-space: pre-wrap;
+              word-wrap: break-word;
+            }
+          }
         }
       }
     }
