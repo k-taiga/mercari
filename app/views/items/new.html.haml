@@ -30,7 +30,7 @@
       .item__content
         .item__content__header 商品の詳細
         .item__form__box
-          .from__group
+          .form__group
             %label
               カテゴリー
               %span.form-require 必須
@@ -44,8 +44,9 @@
               %option ---
       .item__content
         .item__content__header 配送について
+        = link_to '?', "https://www.mercari.com/jp/help_center/article/68/",class: "form__question"
         .item__form__box
-          .from__group
+          .form__group
             %label
               配送料の負担
               %span.form-require 必須
@@ -63,7 +64,25 @@
               %span.form-require 必須
             .select--wrap
               %option ---
-
+      .item__content.clearfix
+        .item__content__header 販売価格(300〜9,999,999)
+        = link_to '?', "https://www.mercari.com/jp/help_center/article/64/",class: "form__question"
+        .item__form__box__price
+          %ul.form__group
+            %label.l-left
+              価格
+              %span.form-require 必須
+              .sell-price
+                ¥
+                %input
+          %ul.form__group
+            %li 販売手数料(10%)
+            .l-right#output -
+          .form__group
+            %label
+              販売利益
+            .l-right2 -
+= render 'shared/login-footer'
 
 
 

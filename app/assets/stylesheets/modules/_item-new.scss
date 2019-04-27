@@ -45,7 +45,7 @@
     }
     pre {
       position: absolute;
-      top: 37%;
+      top: 18%;
       left: 16px;
       right: 16px;
       text-align: center;
@@ -84,9 +84,8 @@
 }
 
 label {
-  display: inline-block;
   margin: 8px 0 0 5px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -123,4 +122,42 @@ option{
   padding: 9px;
   font-size: 14px;
   font-weight: 100;
+}
+
+.form__question {
+  display: inline-block;
+  width: 14px;
+  border-radius: 50%;
+  background: $light-blue;
+  color: $white;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+ul.form__group{
+  border-bottom: 1px solid $formborder;
+  padding: 24px 0;
+}
+
+label.l-left{
+  line-height: 48px;
+}
+
+.item__form__box__price{
+  float: right;
+  width: 400px;
+}
+
+.sell-price{
+  display: inline-block;
+  float: right;
+}
+
+.l-right {
+  float: right;
+  &2{
+    float: right;
+    font-size: 34px;;
+  }
 }
