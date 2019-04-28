@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190428052349) do
+ActiveRecord::Schema.define(version: 20190428055140) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(version: 20190428052349) do
     t.integer "delivery_way_id"
     t.integer "delivery_date_id"
     t.integer "prefecture_id"
-    t.integer "price_id"
     t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
     t.index ["comment_id"], name: "index_items_on_comment_id", using: :btree
@@ -68,19 +67,12 @@ ActiveRecord::Schema.define(version: 20190428052349) do
     t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id", using: :btree
     t.index ["image_id"], name: "index_items_on_image_id", using: :btree
     t.index ["prefecture_id"], name: "index_items_on_prefecture_id", using: :btree
-    t.index ["price_id"], name: "index_items_on_price_id", using: :btree
     t.index ["sell_status_id"], name: "index_items_on_sell_status_id", using: :btree
     t.index ["size_id"], name: "index_items_on_size_id", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
 
   create_table "prefectures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "prices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -127,7 +119,6 @@ ActiveRecord::Schema.define(version: 20190428052349) do
   add_foreign_key "items", "delivery_ways"
   add_foreign_key "items", "images"
   add_foreign_key "items", "prefectures"
-  add_foreign_key "items", "prices"
   add_foreign_key "items", "sell_statuses"
   add_foreign_key "items", "sizes"
   add_foreign_key "items", "users"

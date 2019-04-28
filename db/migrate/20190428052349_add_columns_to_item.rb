@@ -10,6 +10,5 @@ class AddColumnsToItem < ActiveRecord::Migration[5.0]
     add_reference :items, :delivery_way,    foreign_key: true
     add_reference :items, :delivery_date,   foreign_key: true
     add_reference :items, :prefecture,      foreign_key: true
-    add_reference :items, :price,           foreign_key: true
   end
 end
