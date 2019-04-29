@@ -187,8 +187,11 @@
       }
     }
 
-    .header-nav-rigth {
+    .header-nav-right {
       float: right;
+      li {
+        float: right;
+      }
       &__login {
         display: inline-block;
         font-size: 14px;
