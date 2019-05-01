@@ -115,25 +115,27 @@
           %li
             %h3
               = link_to 'ブランド一覧', "#"
-  .header-nav.clearfix
-    - if user_signed_in?
-      %ul.header-nav-right
-        //お知らせ
+
+    %ul.header-nav-user
+      - if user_signed_in?
         %li{"data-id" => "pc-header-user-nav", "data-key" => "notification_list", "data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}
-          %a.pc-header-menu-link{"data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/", :href => "https://www.mercari.com/jp/mypage/notification/"}
-            %i.icon-bell
-            %span お知らせ
-          %ul.pc-header-user-box.pc-header-notification-box.mypage-item-list{"data-id" => "pc-header-user-items"}
-            %li
-              %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-                %figure
-                  %img{:src => "//static.mercdn.net/images/mercari_profile.png"}/
-                .mypage-item-body
-                  .mypage-item-text 事務局から個別メッセージ「お問い合わせ受付完了のお知らせ」
-                  %time
-                    %i.icon-time
-                    %span 14 時間前
-                %i.icon-arrow-right
+          .header-nav-user-link
+            %i.far.fa-bell
+            = link_to 'お知らせ','#'
+            %ul.header-nav-user-link-box.header-notification-box.mypage-item-list
+              %li
+                = link_to 'レディース', "#"
+          / %ul.pc-header-user-box.pc-header-notification-box.mypage-item-list{"data-id" => "pc-header-user-items"}
+          /   %li
+          /     %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+          /       %figure
+          /         %img{:src => "//static.mercdn.net/images/mercari_profile.png"}/
+          /       .mypage-item-body
+          /         .mypage-item-text 事務局から個別メッセージ「お問い合わせ受付完了のお知らせ」
+          /         %time
+          /           %i.icon-time
+          /           %span 14 時間前
+          /       %i.icon-arrow-right
         //やることリスト
         %li{"data-id" => "pc-header-user-nav", "data-key" => "todo_list", "data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}
           %a.pc-header-menu-link{"data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/", :href => "https://www.mercari.com/jp/mypage/todo/"}
@@ -168,7 +170,7 @@
                       ¥ 0
                       %i.icon-arrow-right
                 %li
-                  %a.pc-header-link.clearfix{:href => "https://www.mercari.com/jp/mypage/point/"}
+                  %a.pc-header-link.clearfix{:href => " https://www.mercari.com/jp/mypage/point/"}
                     .l-left ポイント
                     .l-right
                       P 0
@@ -178,10 +180,10 @@
                 %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/like/history/"}
                   いいね！一覧
                   %i.icon-arrow-right
-    - else
-      %ul.header-nav-right
-        %li.header-nav-right__login
-          = link_to 'ログイン',  new_user_session_path
-        %li.header-nav-right__signup
-          = link_to '新規会員登録', new_user_registration_path
+      - else
+        %ul.header-nav-right
+          %li.header-nav-right__login
+            = link_to 'ログイン',  new_user_session_path
+          %li.header-nav-right__signup
+            = link_to '新規会員登録', new_user_registration_path
 

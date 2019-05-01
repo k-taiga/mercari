@@ -187,6 +187,43 @@
       }
     }
 
+    //ログイン
+    .header-nav-user {
+      width: 379.39px;
+      height: 44px;
+      float: right;
+      list-style: none;
+      display: block;
+
+      li {
+        height: 44px;
+        padding: 0 14px;
+        position: relative;
+        display: inline-block;
+
+        &__link {
+          display: block;
+          height: 44px;
+          line-height: 32px;
+          color: #333;
+          text-decoration: none;
+
+          &__link ul li ul {
+            display: none;
+          }
+
+          &__link ul li:hover ul {
+            display: block;
+          }
+        }
+      }
+
+      li {
+        padding: 0 14px;
+      }
+    }
+
+//未ログイン
     .header-nav-right {
       float: right;
       &__login {
@@ -203,7 +240,6 @@
           border-radius: 4px;
           text-align: center;
         }
-      }
 
       &__signup {
         display: inline-block;
@@ -228,3 +264,4 @@
       }
     }
   }
+}
