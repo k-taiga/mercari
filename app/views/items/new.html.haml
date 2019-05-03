@@ -14,10 +14,10 @@
         .item__dropbox__zone
           / imageモデルに紐づくformタグを作成（ブロック引数はimage)
           =f.fields_for :image, ItemImage.new do |image|
-            %ul.sell-dropbox-items
-            .sell-dropbox-uploader
-            / formタグのラベル作成 itemではなくimageのdbに保存するためdoでpostする
-            = image.label :image, for: "image" , class: "sell-dropbox-uploader_container" do
+            %ul.item-dropbox-items
+            .item-dropbox-uploader
+            / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
+            = image.label :image, for: "image" , class: "item-dropbox-uploader_container" do
               =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
           %pre.item__upload--visible
             ドラッグアンドドロップ
@@ -65,6 +65,7 @@
               発送元の地域
               %span.form-require 必須
             = f.select :prefecture , ["千葉県","東京都"] ,{ prompt: "---"} , {class: "input__default" }
+          .form__group
             %label
               発送までの日数
               %span.form-require 必須
@@ -73,19 +74,20 @@
         .item__content__header 販売価格(300〜9,999,999)
         = link_to '?', "https://www.mercari.com/jp/help_center/article/64/",class: "form__question"
         .item__form__box__price
-          %ul.form__group
-            = f.label :価格
-            %span.form-require 必須
-            .sell-price
-              = f.label :¥, class: "sell__price-label"
-              = f.text_field :price, maxlength: "7", placeholder: "例)300", class: "sell__price--input"
-          %ul.form__group
-            %li 販売手数料(10%)
-            .l-right#output -
-          .form__group
-            %label
-              販売利益
-            .l-right2 -
+          %ul.item__form__right
+            %li.item__form__right-box
+              = f.label :価格
+              %span.form-require 必須
+              .item__price
+                = f.label :¥, class: "item__price-label"
+                = f.text_field :price, maxlength: "7", placeholder: "例)300", class: "item__price--input"
+            %li.item__form__right-box
+              販売手数料(10%)
+              .l-right#output -
+            %li.item__form__right-box
+              %label
+                販売利益
+              .l-right2 -
       .item__content
         %p.sell__btn__box
           = link_to '禁止されている出品', "https://www.mercari.com/jp/help_center/getting_started/prohibited_items/"
