@@ -13,7 +13,7 @@
         .item__dropbox
         .item__dropbox__zone
           / imageモデルに紐づくformタグを作成（ブロック引数はimage)
-          =f.fields_for :image, Image.new do |image|
+          =f.fields_for :image, ItemImage.new do |image|
             %ul.sell-dropbox-items
             .sell-dropbox-uploader
             / formタグのラベル作成 itemではなくimageのdbに保存するためdoでpostする
@@ -41,7 +41,7 @@
           .form__group
             =f.label :商品の状態
             %span.form-require 必須
-            = f.text_field :sell_status, class: "input__default", placeholder: "--"
+            = f.text_field :status, class: "input__default", placeholder: "--"
       .item__content
         .item__content__header 配送について
         = link_to '?', "https://www.mercari.com/jp/help_center/article/68/",class: "form__question"
@@ -50,7 +50,7 @@
             %label
               配送料の負担
               %span.form-require 必須
-            = f.text_field :delivery_way, class: "input__default", placeholder: "--"
+            = f.text_field :delivery_cost, class: "input__default", placeholder: "--"
           .form__group
             %label
               発送元の地域
@@ -60,7 +60,7 @@
             %label
               発送までの日数
               %span.form-require 必須
-            = f.text_field :delivery_date, class: "input__default", placeholder: "--"
+            = f.text_field :delivery_day, class: "input__default", placeholder: "--"
       .item__content.clearfix
         .item__content__header 販売価格(300〜9,999,999)
         = link_to '?', "https://www.mercari.com/jp/help_center/article/64/",class: "form__question"
