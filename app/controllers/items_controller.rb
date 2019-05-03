@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # @item.item_images.build
+    @item.item_images.build
   end
 
   def create
@@ -18,9 +18,8 @@ class ItemsController < ApplicationController
 
   private
 
-  # 後にbrandとsizeのカラムを追加
   def item_params
-    params.require(:item).permit(:name,:info,:category,:sell_status,:deilvery_way,:prefecture,:delivery_date,:price,images_attributes: [:image])
+    params.require(:item).permit(:name,:info,:category_id,:brand_id,:size,:status,:delivery_cost,:prefecture,:delivery_day,:price,item_images_attributes: [:image]).merge(user_id: current_user.id )
   end
 
 end

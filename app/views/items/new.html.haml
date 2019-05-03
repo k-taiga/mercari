@@ -37,11 +37,20 @@
           .form__group
             =f.label :カテゴリー
             %span.form-require 必須
-            = f.text_field :category, class: "input__default", placeholder: "--"
+            / categoryのdbから持ってきたデータをselectするためのformパーツ
+            = f.collection_select :category_id, Category.all, :id, :name, {prompt: "---"},class: "input__default"
+          .form__group
+            =f.label :ブランド
+            %span.form-require 必須
+            = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "---"},class: "input__default"
+          .form__group
+            =f.label :サイズ
+            %span.form-require 必須
+            = f.select :size , ["S","M","L"] ,{ prompt: "---"} , {class: "input__default" }
           .form__group
             =f.label :商品の状態
             %span.form-require 必須
-            = f.text_field :status, class: "input__default", placeholder: "--"
+            = f.select :status , ["新品,未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"] ,{ prompt: "---"} , {class: "input__default" }
       .item__content
         .item__content__header 配送について
         = link_to '?', "https://www.mercari.com/jp/help_center/article/68/",class: "form__question"
@@ -50,17 +59,16 @@
             %label
               配送料の負担
               %span.form-require 必須
-            = f.text_field :delivery_cost, class: "input__default", placeholder: "--"
+            = f.select :delivery_cost , ["送料負担(出品者負担)","着払い(購入者負担)"] ,{ prompt: "---"} , {class: "input__default" }
           .form__group
             %label
               発送元の地域
               %span.form-require 必須
-            = f.text_field :prefecture, class: "input__default", placeholder: "--"
-          .form__group
+            = f.select :prefecture , ["千葉県","東京都"] ,{ prompt: "---"} , {class: "input__default" }
             %label
               発送までの日数
               %span.form-require 必須
-            = f.text_field :delivery_day, class: "input__default", placeholder: "--"
+            = f.select :delivery_day , ["1~2日で発送","2~3日で発送","4~7日で発送"] ,{ prompt: "---"} , {class: "input__default" }
       .item__content.clearfix
         .item__content__header 販売価格(300〜9,999,999)
         = link_to '?', "https://www.mercari.com/jp/help_center/article/64/",class: "form__question"
