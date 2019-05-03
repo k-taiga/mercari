@@ -12,52 +12,44 @@
   font-weight: 600;
 }
 
-.item__form-upload {
-  border-top: 1px solid $light-gray;
+.item__upload {
+  width: 620px;
   padding: 40px;
-  &__header {
-    font-size: 16px;
-    font-weight: 600;
-    +p {
-      margin: 8px 0 0;
-      line-height: 1.5;
+  border-top: 1px solid $light-gray;
+    &__header {
+      font-size: 16px;
+      font-weight: bold;
     }
-  }
-  &__dropbox {
-    @include clearfix();
-    display: block;
-    width: 620px;
-    margin: 16px auto 0;
-    &__content {
-      display: inline;
-      &-item {
-        display: inline;
-        float: left;
-      }
-    }
-    &__zone{
-      width: 100%;
-      margin: 0;
-      padding: 40px;
-      background: $light-gray;
-      border: 1px dashed $Gray;
-      min-height: 162px;
-    }
-    pre {
+    &--visible {
       position: absolute;
-      top: 16%;
+      top: 50%;
       left: 16px;
       right: 16px;
-      text-align: center;
-      line-height: 1.5;
       transform: translate(0, -50%);
-      pointer-events: none;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      overflow: auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      cursor: pointer;
     }
-  }
 }
+
+.item__dropbox{
+  margin: 16px auto 0;
+}
+
+.item__dropbox__zone {
+  position: relative;
+  width: 620px;
+  min-height: 184px;
+  padding: 0px;
+  background: $light-gray;
+  border: 1px dashed $Gray;
+  font-size: 0;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 
 .item__content{
   padding: 40px;
@@ -175,3 +167,25 @@ p.sell__btn__box {
   margin: 24px auto 0;
 }
 
+.sell-dropbox-uploader {
+  width: 620px;
+  height: 184px;
+  float: left;
+  position: absolute;
+  right:0;
+}
+
+label.sell-dropbox-uploader_container {
+  width: 620px;
+  height: 184px;
+  z-index: 0;
+}
+
+input.goods_images.hidden#goods_image {
+  width: 620px;
+  height: 184px;
+  position: absolute;
+  left:0;
+  opacity: 0;
+  z-index: 0;
+}
