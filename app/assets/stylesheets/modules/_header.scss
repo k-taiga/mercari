@@ -3,7 +3,7 @@
   display: block;
   clear: both;
 }
-.main_header{
+.main_header {
   width: 100vw;
   height: 108px;
   .header {
@@ -49,9 +49,7 @@
       }
     }
   }
-}
-
-  .header-nav.clearfix{
+  .header-nav.clearfix {
     margin: 8px 0 0;
     height: 42px;
     .header-nav-left {
@@ -186,7 +184,6 @@
         }
       }
     }
-
     //ログイン
     .header-nav-user {
       width: 379.39px;
@@ -195,34 +192,63 @@
       list-style: none;
       display: block;
 
-      li {
+      .header-nav-user--link {
+        width: 82px;
         height: 44px;
-        padding: 0 14px;
+        font-size: 0;
+        list-style: none;
+        padding: 0 14px 0 0;
+        cursor: pointer;
+        line-height: 32px;
         position: relative;
-        display: inline-block;
+        display: block;
 
-        &__link {
-          display: block;
-          height: 44px;
-          line-height: 32px;
-          color: #333;
-          text-decoration: none;
 
-          &__link ul li ul {
-            display: none;
+        i.far.fa-bell {
+          height: 21px;
+          width: 16px;
+          font-size: 20px;
+          color: #ccc;
+          display: inline-block;
+          font-weight: 400;
+          vertical-align: middle;
+        }
+
+          a {
+            height: 18px;
+            width: 56px;
+            color: #333;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 14px;
+            vertical-align: middle;
+            position: absolute;
+           }
+
+        ul.header-nav-user--link--box {
+          position: absolute;
+          top: 44px;
+          z-index: 1;
+          display: none;
+          width: 320px;
+          background: #fff;
+          font-size: 14px;
+
+          li {
+            border-bottom: 1px solid #eee;
+            position: relative;
+            display: list-item;
           }
 
-          &__link ul li:hover ul {
+           a {
             display: block;
+            min-height: 80px;
+            padding: 16px;
+            color: #333;
           }
         }
       }
-
-      li {
-        padding: 0 14px;
-      }
     }
-
 //未ログイン
     .header-nav-right {
       float: right;
@@ -240,6 +266,7 @@
           border-radius: 4px;
           text-align: center;
         }
+      }
 
       &__signup {
         display: inline-block;
@@ -265,3 +292,4 @@
     }
   }
 }
+
