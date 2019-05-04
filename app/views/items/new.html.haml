@@ -14,8 +14,8 @@
         .item__dropbox__zone
           / imageモデルに紐づくformタグを作成（ブロック引数はimage)
           =f.fields_for :item_images, ItemImage.new do |image|
-            %ul.item-dropbox-items
-            .item-dropbox-uploader
+            %ul.item__dropbox__items
+            .item__dropbox__uploader
             / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
             = image.label :image, for: "goods_image" , class: "item-dropbox-uploader_container" do
               =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
