@@ -1,0 +1,100 @@
+:root {
+  cursor: auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #000;
+  font: 66.66667% sans-serif;
+}
+
+html {
+  height: 100%;
+  overflow-y: auto;
+}
+
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  background: #f5f5f5;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+a {
+  color: #0099e8;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+nav ol, nav ul {
+  list-style: none;
+}
+
+button {
+  outline: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  border-radius: 0;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.btn-default {
+  @include btn-default();
+}
+
+.btn-red {
+  @include btn-red();
+}
+
+.btn-gray {
+  @include btn-gray();
+}
+
+.form-require {
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.default-container {
+  .white {
+    background-color: #fff;
+  }
+  .main {
+    display: block;
+  }
+}
