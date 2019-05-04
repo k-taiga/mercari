@@ -186,69 +186,9 @@
     }
     //ログイン
     .header-nav-user {
-      width: 379.39px;
-      height: 44px;
-      float: right;
-      list-style: none;
-      display: block;
-
       .header-nav-user--link {
-        width: 82px;
-        height: 44px;
-        font-size: 0;
-        list-style: none;
-        padding: 0 14px 0 0;
-        cursor: pointer;
-        line-height: 32px;
-        position: relative;
-        display: block;
-
-
-        i.far.fa-bell {
-          height: 21px;
-          width: 16px;
-          font-size: 20px;
-          color: #ccc;
-          display: inline-block;
-          font-weight: 400;
-          vertical-align: middle;
-        }
-
-          a {
-            height: 18px;
-            width: 56px;
-            color: #333;
-            text-decoration: none;
-            margin-left: 10px;
-            font-size: 14px;
-            vertical-align: middle;
-            position: absolute;
-           }
-
-        ul.header-nav-user--link--box {
-          position: absolute;
-          top: 44px;
-          z-index: 1;
-          display: none;
-          width: 320px;
-          background: #fff;
-          font-size: 14px;
-
-          li {
-            border-bottom: 1px solid #eee;
-            position: relative;
-            display: list-item;
-          }
-
-           a {
-            display: block;
-            min-height: 80px;
-            padding: 16px;
-            color: #333;
-          }
         }
       }
-    }
 //未ログイン
     .header-nav-right {
       float: right;

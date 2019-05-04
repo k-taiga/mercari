@@ -118,72 +118,19 @@
 
     %ul.header-nav-user
       - if user_signed_in?
-        %li
-          .header-nav-user-link
-            %i.far.fa-bell
-            = link_to 'お知らせ','#'
-            %ul.header-nav-user-link-box.pc-header-notification-box.mypage-item-list
-              %li
-                = link_to 'レディース', "#"
-          / %ul.pc-header-user-box.pc-header-notification-box.mypage-item-list{"data-id" => "pc-header-user-items"}
-          /   %li
-          /     %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-          /       %figure
-          /         %img{:src => "//static.mercdn.net/images/mercari_profile.png"}/
-          /       .mypage-item-body
-          /         .mypage-item-text 事務局から個別メッセージ「お問い合わせ受付完了のお知らせ」
-          /         %time
-          /           %i.icon-time
-          /           %span 14 時間前
-          /       %i.icon-arrow-right
-        //やることリスト
-        / %li{"data-id" => "pc-header-user-nav", "data-key" => "todo_list", "data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}
-        /   %a.pc-header-menu-link{"data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/", :href => "https://www.mercari.com/jp/mypage/todo/"}
-        /     %i.icon-check
-        /     %span やることリスト
-        /   %ul.pc-header-user-box.pc-header-todo-box.mypage-item-list{"data-id" => "pc-header-user-items"}
-        /     %li.mypage-item-not-found.bold 現在、やることリストはありません
-        / //マイページ
-        / %li
-        /   %a.pc-header-user-icon.pc-header-menu-link{:href => "https://www.mercari.com/jp/mypage/"}
-        /     %figure
-        /       %div
-        /         %img{:alt => "", :src => "//static.mercdn.net/thumb/members/149539627.jpg?1533137204", :width => "32"}/
-        /     %span マイページ
-        /   .pc-header-user-box.pc-header-mypage-box
-        /     .pc-header-mypage-state.text-center
-        /       %figure
-        /         %div
-        /           %img{:alt => "", :src => "//static.mercdn.net/thumb/members/149539627.jpg?1533137204", :width => "60"}/
-        /         %figcaption nsddik0730
-        /       %ul.pc-header-mypage-review-listing
-        /         %li
-        /           %a.pc-header-link{:href => "https://www.mercari.com/jp/mypage/review/history/"} 評価: 1
-        /         %li
-        /           %a.pc-header-link{:href => "https://www.mercari.com/jp/mypage/listings/listing/"} 出品数: 0
-        /       %ul.pc-header-mypage-sales-point
-        /         %li
-        /           %a.pc-header-link.clearfix{:href => "https://www.mercari.com/jp/mypage/sales/"}
-        /             .l-left
-        /               売上金
-        /             .l-right
-        /               ¥ 0
-        /               %i.icon-arrow-right
-        /         %li
-        /           %a.pc-header-link.clearfix{:href => " https://www.mercari.com/jp/mypage/point/"}
-        /             .l-left ポイント
-        /             .l-right
-        /               P 0
-        /               %i.icon-arrow-right
-        /     %ul.mypage-nav-list
-        /       %li
-        /         %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/like/history/"}
-        /           いいね！一覧
-        /           %i.icon-arrow-right
+        %li.header-nav-user--news
+          %i.far.fa-bell
+            = link_to 'お知らせ'
+        %li.header-nav-user--todo
+          %i.fas.fa-check
+            = link_to 'やることリスト'
+        %li.header-nav-use--mypage
+          = image_tag '//static.mercdn.net/thumb/members/149539627.jpg?1533137204'
+            = link_to 'マイページ'
       - else
         %ul.header-nav-right
           %li.header-nav-right__login
-            = link_to 'ログイン',  new_user_session_path
+            = link_to 'ログイン', new_user_session_path
           %li.header-nav-right__signup
             = link_to '新規会員登録', new_user_registration_path
 
