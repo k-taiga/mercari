@@ -76,5 +76,6 @@ gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'dropzonejs-rails', '0.8.2'
 
 
