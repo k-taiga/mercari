@@ -37,7 +37,7 @@
           .form__group
             =f.label :カテゴリー
             %span.form-require 必須
-            / categoryのdbから持ってきたデータをselectするためのformパーツ
+            / dbから持ってきたデータをselectするためのformパーツ（idで紐づけ）
             = f.collection_select :category_id, Category.all, :id, :name, {prompt: "---"},class: "input__default"
           .form__group
             =f.label :ブランド
