@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function() {
       }
       reader.readAsDataURL(this.files[i]);
       i_count += 1;
-      $("label.item-dropbox-uploader_container").attr('for','goods_image'+ i_count);
+      $("label.item__dropbox__uploader-container").attr('for','goods_image'+ i_count);
     }
   });
 });

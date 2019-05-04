@@ -17,7 +17,7 @@
             %ul.item__dropbox__items
             .item__dropbox__uploader
             / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
-            = image.label :image, for: "goods_image" , class: "item-dropbox-uploader_container" do
+            = image.label :image, for: "goods_image" , class: "item__dropbox__uploader-container" do
               =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
           %pre.item__upload--visible
             ドラッグアンドドロップ
