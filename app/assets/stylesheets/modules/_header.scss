@@ -186,9 +186,82 @@
     }
     //ログイン
     .header-nav-user {
-      .header-nav-user--link {
+      height: 42px;
+      float: right;
+      display: block;
+
+      ul.header-nav-user {
+        display: block;
         }
-      }
+
+        li.header-nav-user--news {
+          width: 96px;
+          height: 39px;
+          position: relative;
+          display: inline-block;
+          line-height: 32px;
+          i.far.fa-bell {
+            color: #ccc;
+            font-size: 13px;
+          }
+            a {
+              color: #333;
+              text-decoration: none;
+            }
+        }
+
+        li.header-nav-user--todo {
+          width: 110px;
+          height: 39px;
+          position: relative;
+          display: inline-block;
+          line-height: 32px;
+          i.fas.fa-check {
+            color: #ccc;
+            font-size: 13px;
+          }
+            a {
+              font-weight: normal;
+              color: #333;
+              text-decoration: none;
+            }
+        }
+
+        li.header-nav-use--mypage {
+          width: 124px;
+          height: 39px;
+          padding-left: 14px;
+          line-height: 32px;
+          color: #333;
+          display: inline-block;
+          figure {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
+            img {
+              width: 32px;
+              height: 32px;
+              vertical-align: bottom;
+              border-radius: 50%;
+            }
+            div {
+              overflow: hidden;
+              border-radius: 50%;
+              display: block;
+            }
+          }
+          span {
+            margin-left: 10px;
+            font-size: 14px;
+            vertical-align: middle;
+            font-weight: normal;
+          }
+        }
+
+
+    }
 //未ログイン
     .header-nav-right {
       float: right;
