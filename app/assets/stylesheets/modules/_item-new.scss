@@ -48,6 +48,28 @@
   margin-right: -4px;
   position: relative;
   z-index: 5;
+    &-container{
+    display: inline-block;
+    height: 100%;
+    box-sizing:border-box;
+    z-index: 4;
+    vertical-align:top;
+    border-left: 1px dashed $Gray;
+    border-right: 1px dashed $Gray;
+      &:first-child {
+        border-right: 1px dashed $Gray;
+      }
+      &:last-child {
+        border-left: 1px dashed $Gray;
+      }
+    }
+    &-figure{
+      height: calc(100% - 44px);
+      line-height: calc(100% - 44px);
+      .itemimage {
+        height: 100%;
+      }
+    }
   }
 }
 

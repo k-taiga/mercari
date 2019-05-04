@@ -13,11 +13,11 @@
         .item__dropbox
         .item__dropbox__zone
           / imageモデルに紐づくformタグを作成（ブロック引数はimage)
-          =f.fields_for :image, ItemImage.new do |image|
-            %ul.item-dropbox-items
-            .item-dropbox-uploader
+          =f.fields_for :item_images, ItemImage.new do |image|
+            %ul.item__dropbox__items
+            .item__dropbox__uploader
             / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
-            = image.label :image, for: "image" , class: "item-dropbox-uploader_container" do
+            = image.label :image, for: "goods_image" , class: "item-dropbox-uploader_container" do
               =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
           %pre.item__upload--visible
             ドラッグアンドドロップ
@@ -30,7 +30,7 @@
         .form__group
           =f.label :商品の説明
           %span.form-require 必須
-          = f.text_area :info, class: "textarea__default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
+          =f.text_area :info, class: "textarea__default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
       .item__content
         .item__content__header 商品の詳細
         .item__form__box
@@ -59,17 +59,17 @@
             %label
               配送料の負担
               %span.form-require 必須
-            = f.select :delivery_cost , ["送料負担(出品者負担)","着払い(購入者負担)"] ,{ prompt: "---"} , {class: "input__default" }
+            =f.select :delivery_cost , ["送料負担(出品者負担)","着払い(購入者負担)"] ,{ prompt: "---"} , {class: "input__default" }
           .form__group
             %label
               発送元の地域
               %span.form-require 必須
-            = f.select :prefecture , ["千葉県","東京都"] ,{ prompt: "---"} , {class: "input__default" }
+            =f.select :prefecture , ["千葉県","東京都"] ,{ prompt: "---"} , {class: "input__default" }
           .form__group
             %label
               発送までの日数
               %span.form-require 必須
-            = f.select :delivery_day , ["1~2日で発送","2~3日で発送","4~7日で発送"] ,{ prompt: "---"} , {class: "input__default" }
+            =f.select :delivery_day , ["1~2日で発送","2~3日で発送","4~7日で発送"] ,{ prompt: "---"} , {class: "input__default" }
       .item__content.clearfix
         .item__content__header 販売価格(300〜9,999,999)
         = link_to '?', "https://www.mercari.com/jp/help_center/article/64/",class: "form__question"
@@ -79,8 +79,8 @@
               = f.label :価格
               %span.form-require 必須
               .item__price
-                = f.label :¥, class: "item__price-label"
-                = f.text_field :price, maxlength: "7", placeholder: "例)300", class: "item__price--input"
+                =f.label :¥, class: "item__price-label"
+                =f.text_field :price, maxlength: "7", placeholder: "例)300", class: "item__price--input"
             %li.item__form__right-box
               販売手数料(10%)
               .l-right#output -
