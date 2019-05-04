@@ -95,6 +95,8 @@ GEM
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
+    dropzonejs-rails (0.8.2)
+      rails (> 3.1)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -337,6 +339,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  dropzonejs-rails (= 0.8.2)
   erb2haml
   factory_bot_rails
   faker
