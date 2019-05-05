@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+  end
+
   private
 
   # 親要素itemの子要素であるitem_imageのパラメータをattributesで取得(1対多の関係)
