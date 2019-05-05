@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
     ImageCount()
   }
 
-// 画像を表示する
+// 画像表示機能 goods_imagesクラスに変更がある分、ビューに[goods_image + i_count（画像追加分）]を表示
   $('.goods_images').on("change",function(e) {
     for(var i = 0; i < this.files.length; i++){
       const reader = new FileReader();
