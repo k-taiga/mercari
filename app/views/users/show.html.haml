@@ -1,0 +1,66 @@
+.main_header
+  = render 'shared/header'
+  - breadcrumb :user
+  = breadcrumbs pretext: " ", separator: " › "
+%section.pickup-container
+  .mypage-body.clearfix
+    = render 'shared/user-side'
+    .main__content
+      %section.user-information
+        =link_to "#" , class: "user-information__link" do
+          .user-information__figure
+            = image_tag("//static.mercdn.net/thumb/members/149539627.jpg?1533137204", size: "60" , class: "user-information__figure--icon")
+            %h3.user-information__name
+              西田
+            .user-information__number
+              .user-information__number--review
+                評価
+                %span.bold
+                  7
+              .user-information__number--exhibit
+                出品数
+                %span.bold
+                  30
+      .user-information__tab
+        //タブの開始
+        .tabs
+          %input#notice{:checked => "checked", :name => "tab_user", :type => "radio"}/
+          %label.tab_user_first{:for => "notice"}
+            お知らせ
+          %input#todo{:name => "tab_user", :type => "radio"}/
+          %label.tab_user{:for => "todo"}
+            やることリスト
+          #notice_content.tab_content
+            //タブ-リストの開始
+            %ul.tab-content
+              %li.notice_content
+                = render 'shared/user-tab'
+            //タブ-リスト（やることリスト）
+          #todo_content.tab_content
+            %ul.tab-content
+              %li.todo_content
+                = image_tag("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?62593201" , class: "tab-content__list--image" )
+                .text 現在、やることリストはありません
+      //ユーザーの商品情報（下の部分）
+      %section.trade-information
+        %h2.trade-information__tab
+          購入した商品
+        //タブの部分
+        .tabs
+          %input#trade-now{:checked => "checked", :name => "tab_item", :type => "radio"}/
+          %label.tab_item_first{:for => "trade-now"}
+            取引中
+          %input#trade-kako{:name => "tab_item", :type => "radio"}/
+          %label.tab_item{:for => "trade-kako"}
+            過去の取引
+          #trade-now_content.tab_content
+            %ul.trade-now-content
+              %li.trade-now_content
+                = render 'shared/user-tab'
+          #trade-kako_content.tab_content
+            = image_tag("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?62593201" , class: "tab-content__list--image" )
+            .text 過去の取引はございません
+
+  / = render 'shared/aside'
+  = render 'shared/footer'
+  = render 'shared/sell-button'
