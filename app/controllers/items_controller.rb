@@ -2,8 +2,10 @@ class ItemsController < ApplicationController
 
 
   def index
-    @item = Item.find(4)
-    @category = Category.find(1)
+    @items = Item.includes(:item_images).order("created_at DESC")
+    @category1 = Category.find(1)
+    @category2 = Category.find(2)
+    @category3 = Category.find(3)
   end
 
   def new
