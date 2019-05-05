@@ -37,6 +37,10 @@
   margin: 0;
 }
 
+li.tab-content__list {
+  width: 700px;
+  text-align: center;
+}
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
@@ -45,6 +49,13 @@
   overflow: hidden;
   text-align: left;
   // max-height:    後々制限が必要？（メルカリだとリスト⑤個分）
+
+section.trade-information{
+  h2.trade-information__tab {
+    font-weight: bold;
+    text-align: left;
+  }
+}
 
 //やることリスト
   li.todo_content,  {
@@ -55,21 +66,18 @@
 
     img.tab-content__list--image {
       padding-top: 50px;
+      display: block;
+      margin: auto;
     }
 
     .text {
       font-size: 16px;
       padding-top: 35px;
+      text-align: center;
     }
   }
 }
 
-section.trade-information{
-  h2.trade-information__tab {
-    font-weight: bold;
-    text-align: left;
-  }
-}
 //購入した商品・過去の取引
 #trade-kako_content.tab_content {
   height:236px;
@@ -79,11 +87,14 @@ section.trade-information{
 
   img.tab-content__list--image {
       padding-top: 50px;
+      display: block;
+      margin: auto;
     }
 
   .text {
     font-size: 16px;
     padding-top: 35px;
+    text-align: center;
   }
 }
 /*選択されているタブのコンテンツのみを表示*/
@@ -104,7 +115,7 @@ section.trade-information{
         height: 80px;
         padding: 16px;
         float: left;
-        width: calc(100% - 32px);
+        width: 700px;
         border-bottom:  solid 1px #f5f5f5;
         text-decoration: none;
         &:hover {
