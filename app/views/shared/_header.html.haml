@@ -6,7 +6,7 @@
     .header_top__form
       .header_top__form--input-box
         = form_tag( 'search_articles_path', method: :get ) do
-          = text_field_tag :q, '', class: 'header_top__form--input-box__text',placeholder: '何をお探しですか'
+          = text_field_tag :q, '', class: 'header_top__form--input-box__text',placeholder: '何かお探しですか？'
         = link_to root_path, class: 'header_top__form--input-box__btn' do
           = fa_icon "search"
   .header-nav.clearfix

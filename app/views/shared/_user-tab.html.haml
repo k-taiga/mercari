@@ -1,0 +1,43 @@
+= link_to "" , class: "tab-content__list"  do
+  = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?4194600336", class: "tab-content__list--mercari")
+  = fa_icon "angle-right", class: "tab-content__list--arrow"
+  .tab-content__list--body
+    .tab-content__list--body-text
+      明日、5%還元お得チケットの有効期限が切れます！タップして詳細を確認しましょう。
+    .tab-content__list--body-time
+      = fa_icon "clock-o", class: "tab-content__icon--time"
+      %span
+        57分前
+= link_to "" , class: "tab-content__list"  do
+  = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?4194600336", width: "48", class: "tab-content__list--mercari")
+  = fa_icon "angle-right", class: "tab-content__list--arrow"
+  .tab-content__list--body
+    .tab-content__list--body-text
+      お出かけ中の人はぜひ！いまならセブンカフェが¥11になるクーポン配信中！利用は5/31まで
+    .tab-content__list--body-time
+      = fa_icon "clock-o", class: "tab-content__icon--time"
+      %span
+        5時間前
+= link_to "" , class: "tab-content__list"  do
+  = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?4194600336", width: "48", class: "tab-content__list--mercari")
+  = fa_icon "angle-right", class: "tab-content__list--arrow"
+  .tab-content__list--body
+    .tab-content__list--body-text
+      《5/25まで》5％ポイントバックのお得チケットをお持ちです
+    .tab-content__list--body-time
+      = fa_icon "clock-o", class: "tab-content__icon--time"
+      %span
+        19時間前
+= link_to "" , class: "tab-content__list"  do
+  = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?4194600336", width: "48", class: "tab-content__list--mercari")
+  = fa_icon "angle-right", class: "tab-content__list--arrow"
+  .tab-content__list--body
+    .tab-content__list--body-text
+      他のお客様より出品中の商品にいいねが付きました。
+    .tab-content__list--body-time
+      = fa_icon "clock-o", class: "tab-content__icon--time"
+      %span
+        5日前
+//リストがある場合に最後に下記のリストを表示させる必要がある。(メルカリはリスト5個のあとに下記の一覧を見るリストが表示)
+%li.tab-content__list
+  = link_to "一覧をみる" , "/" , class: "tab-content__list--link"

@@ -1,0 +1,114 @@
+//ルート
+.breadcrumbs {
+  background-color: #fff;
+  height: 49px;
+  border-top:  solid 1px #f5f5f5;
+  padding: 0 210px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  line-height: 49px;
+  font-size: 14px;
+  & a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+//全体
+.mypage-body {
+  background-color: #f5f5f5;
+  margin: 100px auto 0;
+  height: 1292px;
+  width: 1020px;
+  padding-bottom: 40px;
+
+  //右側大枠部分
+  .main__content {
+    float: left;
+    width: calc(100vw - 742px);
+    height: 100%;
+    // ユーザー名、評価表示部分
+    .user-information {
+      height: 200px;
+      width: 700px;
+      background: url("https://www.mercari.com/assets/img/mypage/user-bg.jpg");
+      padding: 20px;
+      position: relative;
+      padding: 20px;
+      &__link {
+        display: block;
+        position: absolute;
+        top: 10%;
+        width:700px;
+        text-decoration: none;
+        left: 0;
+        right: 0;
+        //アイコン周りにカーソルが乗ったときに反応
+        &:hover {
+          opacity: 0.6;
+          .user-information__name {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__figure {
+        height: 140px;
+        position: relative;
+        top: 20px;
+        &--icon {
+          border-radius: 50%;
+          width: 60px;
+        }
+        &--icons {
+          border-radius: 50%;
+          width: 60px;
+          position: relative;
+          top: 40px;
+        }
+      }
+          //ログインユーザーの名前
+        &__name {
+          font-size: 14px;
+          color: #333;
+          margin: 14px 0 0;
+          font-weight: bold;
+        }
+          //評価(review)・出品(exhibit)
+        &__number {
+          height:16px;
+          font-size: 14px;
+          margin:0 auto;
+          padding-top: 15px;
+
+          color: #333;
+          width: 140px;
+          &--review {
+            float: left;
+          }
+          &--exhibit {
+            float: right;
+          }
+            span.bold {
+              font-size: 16px;
+            }
+        }
+    }
+  }
+    //購入したのcss
+    .trade-information {
+      height: 382px;
+      margin-top: 40px;
+      &__tab {
+        padding: 0 16px;
+        background-color: #FAFAFA;
+        height: 72px;
+        font-size: 16px;
+        line-height: 72px;
+      }
+    }
+}
+
