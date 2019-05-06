@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = Item.includes(:item_images).order("created_at DESC")
+    @items = Item.includes(:item_images).limit(4).order("created_at DESC")
     @category1 = Category.find(1)
     @category2 = Category.find(2)
     @category3 = Category.find(3)
