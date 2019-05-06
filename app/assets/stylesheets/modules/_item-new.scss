@@ -64,8 +64,8 @@
       }
     }
     &-figure{
-      height: calc(100% - 44px);
-      line-height: calc(100% - 44px);
+      height: 100%;
+      // line-height: calc(100% - 44px);
       .itemimage {
         height: 100%;
       }
