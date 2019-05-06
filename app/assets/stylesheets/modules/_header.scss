@@ -232,7 +232,6 @@
           height: 39px;
           padding-left: 14px;
           line-height: 32px;
-          color: #333;
           display: inline-block;
           figure {
             display: inline-block;
@@ -240,26 +239,16 @@
             text-align: center;
             vertical-align: middle;
             margin: 0;
+            color: #333;
+            font-size: 13px;
             img {
               width: 32px;
               height: 32px;
               vertical-align: bottom;
               border-radius: 50%;
             }
-            div {
-              overflow: hidden;
-              border-radius: 50%;
-              display: block;
-            }
-          }
-          span {
-            margin-left: 10px;
-            font-size: 14px;
-            vertical-align: middle;
-            font-weight: normal;
           }
         }
-
 
     }
 //未ログイン

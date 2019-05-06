@@ -1,0 +1,16 @@
+.main_header
+  = render 'shared/header'
+  //ページのルート表示
+  - breadcrumb :user_signout
+  = breadcrumbs pretext: " ", separator: " › "
+  //ユーザーサイトのメイン部分
+%section.pickup-container
+  .mypage-body.clearfix
+    //左のメニュー部分
+    = render 'shared/user-side'
+    //右のコンテンツ
+    .main__content
+      .signout__content
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout__content--button"
+  = render 'shared/footer'
+  = render 'shared/sell-button'
