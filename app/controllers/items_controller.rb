@@ -19,6 +19,16 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+# ビューの設定を忘れずに
+  def pay
+      Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
+      charge = Payjp::Charge.create(
+      :amount => 6000, # 商品の値段(引数を作成する)
+      :card => params['payjp-token'],
+      :currency => 'jpy',
+  )
+  end
+
   private
 
   # 親要素itemの子要素であるitem_imageのパラメータをattributesで取得(1対多の関係)
