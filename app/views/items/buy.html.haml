@@ -1,0 +1,40 @@
+.item__container
+  =render 'shared/header-logo'
+%section.pickup-container
+  %main.item__container__main
+    %section.item__container__main__box
+      %h2.item__box__header 購入を確定しますか？
+      %section.item__box__inner
+        .item__box__list
+          %h3.item-image
+            = image_tag 'https://img.digimart.net/prdimg/m/98/2c22030c3262529311c07359334d4aa1723cb8.jpg', class: "buy_photo"
+          %P.item-name
+            Fodera Imperial 5st/34" '17 Used
+          %div
+            .price-box
+              %p.item-price
+                ¥ 972,000
+              %p.item-fee 送料込み
+            .item-point
+              ポイントはありません
+            %ul.item-price-table
+              .buy-price-call 支払い金額
+              .buy-price-pay
+                ¥ 972,000
+              %p.has-error-text 配送先と支払い方法の入力を完了してください。
+              %label.payjp__btn
+                購入する
+
+      %section.user__info
+        .buy-container-inner
+          %h3.delivery 配送先
+          %p.adress-user-info
+            〒907-1801
+            %br
+            沖縄県八重山郡与那国町久部良
+            %br
+            西田大輝
+          %a.buy-user-info-fix{href: "/"}変更する >
+
+
+  = render 'shared/footer-logo'
