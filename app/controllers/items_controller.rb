@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def buy
+  end
+
 # ビューの設定を忘れずに
   def pay
       Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
