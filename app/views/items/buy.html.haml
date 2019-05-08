@@ -24,16 +24,25 @@
               %p.has-error-text 配送先と支払い方法の入力を完了してください。
               %label.payjp__btn
                 購入する
+                = form_tag(action: :pay, method: :post) do
+                  %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_7d6421811945dc71ee2edf87"}
 
       %section.user__info
         .buy-container-inner
           %h3.delivery 配送先
           %p.adress-user-info
-            〒907-1801
+            〒123-1234
             %br
-            沖縄県八重山郡与那国町久部良
+            東京都東京市東京区東京町東京567-7
             %br
-            西田大輝
+            ユーザーネーム
+          %a.buy-user-info-fix{href: "/"}変更する >
+      %section.user__footer
+        .buy-footer-inner
+          %h3.payment 支払い方法
+          ******************1234
+          %p.buy-user-info-text 02/21
+          = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?613028459'
           %a.buy-user-info-fix{href: "/"}変更する >
 
 
