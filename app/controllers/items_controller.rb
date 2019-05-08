@@ -22,11 +22,10 @@ class ItemsController < ApplicationController
   def buy
   end
 
-# ビューの設定を忘れずに
   def pay
       Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
       charge = Payjp::Charge.create(
-      :amount => 6000, # 商品の値段(引数を作成する)
+      :amount => @product.price,
       :card => params['payjp-token'],
       :currency => 'jpy',
   )

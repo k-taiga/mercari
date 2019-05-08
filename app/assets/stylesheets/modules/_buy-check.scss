@@ -157,9 +157,10 @@ p.adress-user-info {
 }
 
 .buy-footer-inner {
-  max-width: 320px;
+  width: 485px;
   margin: 0 auto;
   padding: 0 12.5%;
+  text-align: left;
 }
 
 p.buy-user-info-text {
@@ -171,6 +172,12 @@ p.buy-user-info-text {
 h3.payment {
   font-size: 14px;
   font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.buy-footer-inner img {
+  width: 34px;
+  height: 20px;
 }
 
 .payjp__btn {
