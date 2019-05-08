@@ -27,6 +27,9 @@ class ItemsController < ApplicationController
     @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
+  def edit
+  end
+
   private
 
   # 親要素itemの子要素であるitem_imageのパラメータをattributesで取得(1対多の関係)
