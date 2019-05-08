@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @category1 = Category.find(1)
+    @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
   private
