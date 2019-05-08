@@ -25,6 +25,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @category1 = Category.find(1)
     @user_items = Item.where(user_id: @item.user_id).sample(6)
+
+  def pay
+      Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
+      charge = Payjp::Charge.create(
+      :amount => 6000
+      :card => params['payjp-token'],
+      :currency => 'jpy',
+  )
   end
 
   private
