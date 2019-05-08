@@ -6,9 +6,10 @@
   %section.item-boxs.clearfix
     -@items.each do |item|
       %li.item-box
-        %figure.item-box__figure
-          / 商品の一枚目の写真を表示
-          = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
+        = link_to "/items/#{item.id}" do
+          %figure.item-box__figure
+            / 商品の一枚目の写真を表示
+            = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
           .item-box__body
             .item-box__text
               .item-box__name
@@ -24,15 +25,16 @@
                 (税込)
     .view-all
       = link_to "すべての商品を見る", root_path
-
   %h3.items__pickup__container
     = link_to "" ,class: "items__pickup__container__category" do
       = "#{@category2.name} 新着アイテム"
   %section.item-boxs.clearfix
     -@items.each do |item|
       %li.item-box
-        %figure.item-box__figure
-          = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
+        = link_to "/items/#{item.id}" do
+          %figure.item-box__figure
+            / 商品の一枚目の写真を表示
+            = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
           .item-box__body
             .item-box__text
               .item-box__name
@@ -48,16 +50,16 @@
                 (税込)
     .view-all
       = link_to "すべての商品を見る", root_path
-
   %h3.items__pickup__container
     = link_to "" ,class: "items__pickup__container__category" do
       = "#{@category3.name} 新着アイテム"
   %section.item-boxs.clearfix
     -@items.each do |item|
       %li.item-box
-        %figure.item-box__figure
-          / 商品の一枚目の写真を表示
-          = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
+        = link_to "/items/#{item.id}" do
+          %figure.item-box__figure
+            / 商品の一枚目の写真を表示
+            = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
           .item-box__body
             .item-box__text
               .item-box__name
@@ -73,4 +75,3 @@
                 (税込)
     .view-all
       = link_to "すべての商品を見る", root_path
-
