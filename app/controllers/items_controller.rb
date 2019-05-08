@@ -1,8 +1,10 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!,except:[:index,:show]
+  # before_action :set_item,only:[:show]
 
 
   def index
-    @items = Item.includes(:item_images).order("created_at DESC")
+    @items = Item.includes(:item_images).limit(4).order("created_at DESC")
     @category1 = Category.find(1)
     @category2 = Category.find(2)
     @category3 = Category.find(3)
@@ -29,6 +31,12 @@ class ItemsController < ApplicationController
       :card => params['payjp-token'],
       :currency => 'jpy',
   )
+  end
+
+  def show
+    @item = Item.find(params[:id])
+    @category1 = Category.find(1)
+    @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
   private
