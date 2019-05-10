@@ -1,0 +1,9 @@
+# number_to_currencyを使用し￥を表示させるための記述
+jp:
+  number:
+    currency:
+      format:
+        unit: "¥"
+        format: "%u%n"
+        negative_format: "-%u%n"
+        precision: 0
