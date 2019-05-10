@@ -7,20 +7,20 @@
       %section.item__box__inner
         .item__box__list
           %h3.item-image
-            = image_tag item.item_images[0].image, alt: "",class: "item-box__image"
+            = image_tag( @item.item_images[0].image , alt: "" , class: "show-item-box__image")
           %P.item-name
-            Fodera Imperial 5st/34" '17 Used
+            = @item.name
           %div
             .price-box
               %p.item-price
-                ¥ 972,000
+                = @item.price
               %p.item-fee 送料込み
             .item-point
               ポイントはありません
             %ul.item-price-table
               .buy-price-call 支払い金額
               .buy-price-pay
-                ¥ 972,000
+                = @item.price
               %p.has-error-text 配送先と支払い方法の入力を完了してください。
               %label.payjp__btn
                 購入する
