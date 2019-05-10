@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!,except:[:index,:show]
-  # before_action :set_item,only:[:show]
+  before_action :set_item,only:[:buy, :pay, :purchase]
 
 
   def index
@@ -22,9 +22,9 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    @item = Item.find(params[:id])
-    @category1 = Category.find(1)
-    @user_items = Item.where(user_id: @item.user_id).sample(6)
+  end
+
+  def purchase
   end
 
   def show
@@ -33,13 +33,16 @@ class ItemsController < ApplicationController
     @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
+# before_actiondeで@item.priceの情報をpayに渡す
   def pay
-      Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
-      charge = Payjp::Charge.create(
-      :amount => @price,
-      :card => params['payjp-token'],
-      :currency => 'jpy',
-  )
+    Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
+    charge = Payjp::Charge.create(
+    :amount => @item.price ,
+    :card => params['payjp-token'],
+    :currency => 'jpy',
+    )
+
+    redirect_to purchase_item_path
   end
 
 
@@ -48,4 +51,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name,:info,:category_id,:brand_id,:size,:status,:delivery_cost,:prefecture,:delivery_day,:price,item_images_attributes: [:image]).merge(user_id: current_user.id )
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end
