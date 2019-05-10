@@ -29,6 +29,9 @@ class ItemsController < ApplicationController
   def edit
   end
 
+  def check
+  end
+
   private
 
   # 親要素itemの子要素であるitem_imageのパラメータをattributesで取得(1対多の関係)

@@ -1,0 +1,17 @@
+.main_header
+  = render 'shared/header'
+%section.pickup-container
+
+  .mypage-body.clearfix
+    = render 'shared/user-side'
+    .main__content
+      .tabs
+        %input#notice{:checked => "checked", :name => "tab_user", :type => "radio"}/
+        %label.tab_user{:for => "notice"}
+          出品中
+        %input#todo{:name => "tab_user", :type => "radio"}/
+        %label.tab_user{:for => "todo"}
+          売却済み
+        #notice_content.tab_content
+        #todo_content.tab_content
+          = image_tag("user-joukyo.png" , class: "tab-content__list--image" )
