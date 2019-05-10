@@ -79,3 +79,4 @@ gem 'omniauth-google-oauth2'
 gem "gretel"
 gem 'dropzonejs-rails', '0.8.2'
 gem 'gon'
+gem 'payjp'

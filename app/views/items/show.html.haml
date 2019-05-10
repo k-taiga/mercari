@@ -57,13 +57,13 @@
     .show-item-content__price
       .price__box.clear.clearfix
         %p.price__box--total
-          = @item.price
+          = number_to_currency( "#{@item.price}", locale: 'jp')
         %p.price__box--tax
           （税込み）
         %p.price__box--option
           = @item.delivery_cost
     %ul.show-item-content__button
-      = link_to "" do
+      = link_to buy_item_path do
         %li.show-item-content__button-buy
           購入画面に進む
     .show-item-content__information
@@ -121,7 +121,7 @@
                 =item.name
             .item-box__num
               .item-box__num__price
-                = item.price
+                = number_to_currency( "#{item.price}", locale: 'jp')
                 .nice
                   = fa_icon "heart", type: :regular, class: "icon-like-border"
                   %span
