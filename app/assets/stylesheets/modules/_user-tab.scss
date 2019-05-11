@@ -103,7 +103,7 @@ section.trade-information{
   display: block;
 }
 /*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item ,.tabs input:checked + .tab_item_first , .tabs input:checked + .tab_user , .tabs input:checked + .tab_user_first{
+.tabs input:checked + .tab_item ,.tabs input:checked + .tab_item_first , .tabs input:checked + .tab_user , .tabs input:checked + .tab_user_first + .tab_listing {
   background-color: #fff;
   border-top: 2px solid #ea352d;
   } //タブ機能終わり
@@ -134,6 +134,9 @@ section.trade-information{
           }
         }
         &--image {
+          width: 11.55%;
+        }
+        &--picture{
           width: 100%;
         }
         &--mercari {

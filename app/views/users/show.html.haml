@@ -25,7 +25,7 @@
         //タブの開始
         .tabs
           %input#notice{:checked => "checked", :name => "tab_user", :type => "radio"}/
-          %label.tab_user_first{:for => "notice"}
+          %label.tab_user{:for => "notice"}
             お知らせ
           %input#todo{:name => "tab_user", :type => "radio"}/
           %label.tab_user{:for => "todo"}
@@ -48,7 +48,7 @@
         //タブの部分
         .tabs
           %input#trade-now{:checked => "checked", :name => "tab_item", :type => "radio"}/
-          %label.tab_item_first{:for => "trade-now"}
+          %label.tab_user{:for => "trade-now"}
             取引中
           %input#trade-kako{:name => "tab_item", :type => "radio"}/
           %label.tab_item{:for => "trade-kako"}

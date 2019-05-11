@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    get :signout
-    get :listing
+    member do
+      get :signout
+      get :listing
+    end
   end
+
 end
