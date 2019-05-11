@@ -1,0 +1,88 @@
+.main_header
+  = render 'shared/header'
+.show-item
+  %section.show-item-content.clear.clearfix
+    .show-item-content__name
+      =@item.name
+    .show-item-content__profile
+      .show-item-content__profile--img
+        = image_tag( @item.item_images[0].image , alt: "" , class: "show-item-box__image")
+    %table.show-item-content__profile--text
+      %tr
+        %th 出品者
+        %td.e1
+          = link_to "" do
+            =@item.user.nickname
+      %tr
+        %th カテゴリー
+        %td.e1
+          = link_to "" do
+            = @category1.name
+
+      %tr
+        %th ブランド
+        %td.e1
+          - if @item.brand == nil
+          - else
+            = @item.brand.name
+
+      -if @item.size ==""
+      -else
+        %tr
+          %th 商品のサイズ
+          %td
+            = @item.size
+      %tr
+        %th 商品の状態
+        %td
+          / = @item.state_before_type_cast
+          = @item.status
+      %tr
+        %th 配送料の負担
+        %td
+          = @item.delivery_cost
+      / %tr
+      /   %th 配送の方法
+      /   %td
+      /     = @item.delivery
+      %tr
+        %th 配送元地域
+        %td.e1
+          = link_to "" do
+            = @item.prefecture
+      %tr
+        %th 発送日の目安
+        %td
+          = @item.delivery_day
+    .show-item-content__price
+      .price__box.clear.clearfix
+        %p.price__box--total
+          = number_to_currency( "#{@item.price}", locale: 'jp')
+        %p.price__box--tax
+          （税込み）
+        %p.price__box--option
+          = @item.delivery_cost
+  .show-item-edit-box
+    %ul.show-item-edit__button
+      = link_to edit_item_path do
+        %li.show-item-content__button-edit
+          商品の編集
+    %p.text_center
+    or
+    %ul.show-item-stop__button
+      = link_to edit_item_path do
+        %li.show-item-content__button-edit
+          出品を一旦停止する
+    %ul.show-item-stop__button
+      = link_to edit_item_path do
+        %li.show-item-content__button-edit
+          商品を削除する
+  .show-item-detail-message
+    .message-container
+      %p.message-alert
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      .message-content
+        =form_for "" do |f|
+          = f.text_area :comment, type: 'text', rows: 4 , class: 'message-content_text'
+          = f.submit "コメントする", class:'message-content_button'
+= render 'shared/footer'

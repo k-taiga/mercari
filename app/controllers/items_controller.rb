@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!,except:[:index,:show]
-  before_action :set_item,only:[:show]
+  before_action :set_item,only:[:show,:look]
 
 
   def index
@@ -32,10 +32,12 @@ class ItemsController < ApplicationController
     @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
-  def edit
+  def look
+    @category1 = Category.find(1)
   end
 
-  def check
+  def edit
+    @category1 = Category.find(1)
   end
 
   def pay

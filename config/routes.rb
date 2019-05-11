@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     member do
       get :buy
       post :pay
-      get :check
+      get :look
     end
   end
 
