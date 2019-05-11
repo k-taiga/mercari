@@ -16,7 +16,7 @@
                 =item.name
             .item-box__num
               .item-box__num__price
-                = item.price
+                = number_to_currency( "#{item.price}", locale: 'jp')
                 .nice
                   = fa_icon "heart", type: :regular, class: "icon-like-border"
                   %span
@@ -41,7 +41,7 @@
                 =item.name
             .item-box__num
               .item-box__num__price
-                = item.price
+                = number_to_currency( "#{item.price}", locale: 'jp')
                 .nice
                   = fa_icon "heart", type: :regular, class: "icon-like-border"
                   %span
@@ -66,7 +66,7 @@
                 =item.name
             .item-box__num
               .item-box__num__price
-                = item.price
+                = number_to_currency( "#{item.price}", locale: 'jp')
                 .nice
                   = fa_icon "heart", type: :regular, class: "icon-like-border"
                   %span

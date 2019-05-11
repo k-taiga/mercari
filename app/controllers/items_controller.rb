@@ -21,6 +21,12 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def buy
+    @item = Item.find(params[:id])
+    @category1 = Category.find(1)
+    @user_items = Item.where(user_id: @item.user_id).sample(6)
+  end
+
   def show
     @category1 = Category.find(1)
     @user_items = Item.where(user_id: @item.user_id).sample(6)
@@ -30,6 +36,15 @@ class ItemsController < ApplicationController
   end
 
   def check
+  end
+
+  def pay
+      Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
+      charge = Payjp::Charge.create(
+      :amount => @price,
+      :card => params['payjp-token'],
+      :currency => 'jpy',
+  )
   end
 
   private
