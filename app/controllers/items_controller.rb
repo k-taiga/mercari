@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!,except:[:index,:show]
-  before_action :set_item,only:[:buy, :pay, :purchase]
+  before_action :set_item,only:[:show, :buy, :pay, :purchase]
 
 
   def index
@@ -22,13 +22,14 @@ class ItemsController < ApplicationController
   end
 
   def buy
+    @buyer = current_user
+    @seller = @item.user_id
   end
 
   def purchase
   end
 
   def show
-    @item = Item.find(params[:id])
     @category1 = Category.find(1)
     @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
@@ -44,6 +45,8 @@ class ItemsController < ApplicationController
 
     redirect_to purchase_item_path
   end
+
+  private
 
 
   # 親要素itemの子要素であるitem_imageのパラメータをattributesで取得(1対多の関係)
