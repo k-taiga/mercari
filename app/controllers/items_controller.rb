@@ -28,12 +28,10 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @category1 = Category.find(1)
     @user_items = Item.where(user_id: @item.user_id).sample(6)
   end
 
   def look
-    @category1 = Category.find(1)
   end
 
   def edit
