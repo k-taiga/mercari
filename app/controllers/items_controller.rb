@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!,except:[:index,:show]
-  before_action :set_item,only:[:show,:look]
+  before_action :set_item,only:[:show,:look,:edit,:update,:destroy]
 
 
   def index
@@ -37,7 +37,18 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @category1 = Category.find(1)
+  end
+
+  def update
+    @item.update(item_params)
+    redirect_to look_item_path
+  end
+
+  def destroy
+    if @item.user_id == current_user.id
+      @item.destroy
+    end
+    redirect_to items_path
   end
 
   def pay

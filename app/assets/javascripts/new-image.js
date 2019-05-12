@@ -35,4 +35,31 @@ $(document).on('turbolinks:load', function() {
       $("label.item__dropbox__uploader-container").attr('for','goods_image'+ i_count);
     }
   });
+// 削除
+  $(document).on("click",".sell-image_delete",function(e) {
+    var input_num = $(this).attr('id');
+    $(this).parent().remove();
+    $('.sell-dropbox-items_tab').remove();
+    document.getElementById('goods_image'+input_num).value = null
+    $("label.sell-dropbox-uploader_container").attr('for','goods_image'+ input_num);
+    $('.sell-dropbox-uploader').removeClass('hidden');
+    i_count -= 1;
+  });
+
+// ドロップ
+  var target = document.getElementById('drop');
+  if (target) {
+    target.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.dataTransfer.dropEffect = 'copy';
+    });
+    target.addEventListener('drop', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      document.getElementById('goods_image'+ i_count).files = e.dataTransfer.files;
+    });
+  };
 });
+
+
