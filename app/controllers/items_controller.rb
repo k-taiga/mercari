@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
     @category1 = Category.find(1)
     @category2 = Category.find(2)
     @category3 = Category.find(3)
+    @brand1 = Brand.find(1)
   end
 
   def new
