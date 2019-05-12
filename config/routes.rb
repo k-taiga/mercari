@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   resources :users do
     get :signout
   end
+
+  resources :credits, only: [:index, :new]
 end
