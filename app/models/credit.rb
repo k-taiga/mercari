@@ -8,4 +8,3 @@ class Credit < ApplicationRecord
     end
   end
 end
-end
