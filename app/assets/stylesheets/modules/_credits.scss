@@ -31,7 +31,6 @@
       max-width: 320px;
       margin: 0 auto;
       &-default {
-        @include btn-default;
         background-color: #ea352d;
         color: #fff;
         text-decoration: none;
@@ -51,3 +50,36 @@
   margin: 40px 0 0;
 }
 
+// カード登録済み
+section.user__card {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user__card-btn {
+
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 16px;
+  max-width: 320px;
+  text-align: left;
+}
+
+.user__card-btn{
+  line-height: 20px;
+}
+
+form {
+  max-width: 450px;
+}
+
+button {
+  float: right;
+  position: relative;
+  padding: 4px 6px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ea352d;
+  color: #ea352d;
+}
