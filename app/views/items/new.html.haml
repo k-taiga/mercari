@@ -41,7 +41,7 @@
             = f.collection_select :category_id, Category.all, :id, :name, {prompt: "---"},class: "input__default"
           .form__group
             =f.label :ブランド
-            %span.form-require 必須
+            %span.form-not-require 任意
             = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "---"},class: "input__default"
           .form__group
             =f.label :サイズ

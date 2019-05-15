@@ -251,7 +251,7 @@ input.goods_images.hidden#goods_image {
   z-index: 0;
 }
 
- a.sell-dropbox-items-btn.sell-image_delete {
+ a.item__dropbox__items-btn.delete {
   width: 56px;
   height: 44px;
   line-height: 44px;
@@ -267,7 +267,7 @@ input.goods_images.hidden#goods_image {
   }
 }
 
-a.sell-dropbox-items-btn.sell-image_edit{
+a.item__dropbox__items-btn.edit{
   margin-left:-50px;
   width: 56px;
   height: 44px;

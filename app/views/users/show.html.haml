@@ -11,7 +11,7 @@
           .user-information__figure
             = image_tag('https://static.mercdn.net/members/470676864.jpg?1500122515', size: "60" , class: "user-information__figure--icon")
             %h3.user-information__name
-              ユーザー
+              = @user.nickname
             .user-information__number
               .user-information__number--review
                 評価
