@@ -14,7 +14,7 @@
         %section.user__card
           = form_tag( delete_credits_path, method: :post, id: 'charge-form',  name: "inputForm") do
             %input{ type: "hidden", name: "card_id", value: "" }
-            %button 削除する
+            %button.delete 削除する
           .user__card-btn
             = "**** **** **** " + @default_card_information.last4
             %br
@@ -27,3 +27,4 @@
             = fa_icon "angle-right"
 
   = render 'shared/footer'
+  = render 'shared/sell-button'
