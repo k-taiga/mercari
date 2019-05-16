@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', (function() {
   $("#owl-example").owlCarousel({
     autoplay: true,
     items: 1,
@@ -6,4 +6,6 @@ $(function() {
     dots: true,
     navigation : true,
   })
-});
+})
+);
+

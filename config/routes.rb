@@ -8,10 +8,15 @@ Rails.application.routes.draw do
     member do
       get :buy
       post :pay
+      get :look
     end
   end
 
   resources :users do
-    get :signout
+    member do
+      get :signout
+      get :listing
+    end
   end
+
 end

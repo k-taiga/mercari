@@ -80,7 +80,8 @@ textarea {
   @include btn-gray();
 }
 
-.form-require {
+.form {
+  &-require{
   background: #ea352d;
   margin: 0 0 0 8px;
   padding: 2px 4px;
@@ -88,6 +89,16 @@ textarea {
   color: #fff;
   font-size: 12px;
   vertical-align: top;
+  }
+  &-not-require{
+  background: $Gray;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+  }
 }
 
 .default-container {

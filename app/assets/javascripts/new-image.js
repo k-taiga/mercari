@@ -12,18 +12,7 @@ $(document).on('turbolinks:load', function() {
     ImageCount()
   }
 
-  function ImageCount() {
-  var imagelist = $('li.item__dropbox__items_container');
-  if(imagelist.length >= 5){
-    $('.item__dropbox__uploader').addClass('hidden');
-  }
-  else if(imagelist.length < 4){
-    $('.item__dropbox__uploader').removeClass('visibility:hidden');
-  }
-  return imagelist.length
-  }
-
-// 画像表示機能 goods_imagesクラスに変更がある分、ビューに[goods_image + i_count（画像追加分）]を表示
+// 画像表示機能 goods_imagesクラスに変更がある分、出品のビューに[goods_image + i_count（画像追加分）]を表示
   $('.goods_images').on("change",function(e) {
     for(var i = 0; i < this.files.length; i++){
       const reader = new FileReader();
@@ -35,4 +24,11 @@ $(document).on('turbolinks:load', function() {
       $("label.item__dropbox__uploader-container").attr('for','goods_image'+ i_count);
     }
   });
+// ビュー側での画像削除(実際には削除されない)
+  $(document).on("click",".delete",function(e) {
+    var input_num = $(this).attr('id');
+    $(this).parent().remove();
+  });
 });
+
+

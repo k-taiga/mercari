@@ -12,16 +12,22 @@
         %p 最大10枚までアップロードできます
         .item__dropbox
         .item__dropbox__zone
-          / imageモデルに紐づくformタグを作成（ブロック引数はimage)
-          =f.fields_for :item_images, ItemImage.new do |image|
-            %ul.item__dropbox__items
-            .item__dropbox__uploader
-            / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
-            = image.label :image, for: "goods_image" , class: "item__dropbox__uploader-container" do
-              =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
-          %pre.item__upload--visible
-            ドラッグアンドドロップ
-            またはクリックしてファイルをアップロード
+          .item__dropbox__items-figure-edit
+            = image_tag( @item.item_images[0].image , size: "138" , class: "itemimage")
+          %a.item__dropbox__items-btn.edit
+            %p 編集
+          %a.item__dropbox__items-btn.delete
+            %p 削除
+          / / imageモデルに紐づくformタグを作成（ブロック引数はimage)
+          / =f.fields_for :item_images, ItemImage.new do |image|
+          /   %ul.item__dropbox__items
+          /   .item__dropbox__uploader
+          /   / formタグのラベル作成 itemではなくitem_imagesのテーブルに保存するためdoでpostする
+          /   = image.label :image, for: "goods_image" , class: "item__dropbox__uploader-container" do
+          /     =image.file_field :image ,id:"goods_image" , class: "goods_images hidden"
+          / %pre.item__upload--visible
+          /   ドラッグアンドドロップ
+          /   またはクリックしてファイルをアップロード
       .item__content
         .form__group
           =f.label :商品名
@@ -41,7 +47,7 @@
             = f.collection_select :category_id, Category.all, :id, :name, {prompt: "---"},class: "input__default"
           .form__group
             =f.label :ブランド
-            %span.form-not-require 任意
+            %span.form-require 必須
             = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "---"},class: "input__default"
           .form__group
             =f.label :サイズ
@@ -64,7 +70,7 @@
             %label
               発送元の地域
               %span.form-require 必須
-            =f.select :prefecture , ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"] ,{ prompt: "---"} , {class: "input__default" }
+            =f.select :prefecture , ["千葉県","東京都"] ,{ prompt: "---"} , {class: "input__default" }
           .form__group
             %label
               発送までの日数
@@ -103,6 +109,6 @@
           = link_to '加盟店規約', "https://www.mercari.com/jp/seller_terms/ "
           に同意したことになります。
         .item_content__bottom_btn
-          =f.submit :出品する,class: "btn-default btn-red"
+          =f.submit :編集する,class: "btn-default btn-red"
         = link_to 'もどる', root_path, class: "btn-default btn-gray"
 = render 'shared/login-footer'

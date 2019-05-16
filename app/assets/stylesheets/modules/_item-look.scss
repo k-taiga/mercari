@@ -1,0 +1,36 @@
+.show-item-edit-box{
+  margin: 24px auto;
+  padding: 30px 0 24px;
+  width: 700px;
+  background-color: $white;
+  text-align: center;
+}
+
+.show-item{
+  &-edit__button{
+    display: block;
+    background-color: $red;
+    text-align: center;
+    line-height: 48px;
+    margin:16px 16px;
+    font-size: 14px;
+    & a {
+      color: $white;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+  &-stop__button{
+    display: block;
+    background-color: $Gray;
+    text-align: center;
+    line-height: 48px;
+    margin:16px 16px;
+    font-size: 14px;
+    & a {
+      color: $white;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}

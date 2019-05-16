@@ -250,3 +250,35 @@ input.goods_images.hidden#goods_image {
   opacity: 0;
   z-index: 0;
 }
+
+ a.item__dropbox__items-btn.delete {
+  width: 56px;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  position: absolute;
+  background-color: $white;
+  border: 1px solid $Gray;
+  box-sizing:border-box;
+  clear:both;
+  p {
+    color:$Skyblue;
+    font-size: 16px;
+  }
+}
+
+a.item__dropbox__items-btn.edit{
+  margin-left:-50px;
+  width: 56px;
+  height: 44px;
+  line-height: 44px;
+  display: inline-block;
+  background-color: $white;
+  border: 1px solid $Gray;
+  box-sizing:border-box;
+  p {
+    color:$Skyblue;
+    font-size: 16px;
+  }
+}
+
