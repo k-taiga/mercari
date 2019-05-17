@@ -24,16 +24,15 @@
 }
 
 .tab_item, .tab_user {
-  width: 350px;
+  width: calc(100%/2);
   height: 74px;
   font-size: 16px;
   line-height: 74px;
   color: #333;
-  display: inline-block;
+  display: block;
   font-weight: bold;
   transition: all 0.2s ease;
-  float: right;
-  clear: both;
+  float: left;
   margin: 0;
 }
 
@@ -104,7 +103,7 @@ section.trade-information{
   display: block;
 }
 /*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item ,.tabs input:checked + .tab_item_first , .tabs input:checked + .tab_user , .tabs input:checked + .tab_user_first{
+.tabs input:checked + .tab_item ,.tabs input:checked + .tab_item_first , .tabs input:checked + .tab_user , .tabs input:checked + .tab_user_first + .tab_listing {
   background-color: #fff;
   border-top: 2px solid #ea352d;
   } //タブ機能終わり
@@ -136,6 +135,9 @@ section.trade-information{
         }
         &--image {
           width: 11.55%;
+        }
+        &--picture{
+          width: 100%;
         }
         &--mercari {
           background-color: #f5f5f5;
