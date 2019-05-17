@@ -10,6 +10,20 @@ class CreditsController < ApplicationController
   def index
   end
 
+  def payment
+  end
+
+  def complete
+    card = Credit.where(user_id: current_user.id).first
+    if card.blank?
+      redirect_to action: "new"
+    else
+      Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @default_card_information = customer.cards.retrieve(card.card_id)
+    end
+  end
+
   def pay #payjpとCardのデータベース作成を実施します。
     Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
     if params['payjp-token'].blank?
@@ -43,7 +57,7 @@ class CreditsController < ApplicationController
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します
-    card = Credit.where(user_id: current_user.id).first
+  card = Credit.where(user_id: current_user.id).first
     if card.blank?
       redirect_to action: "new"
     else

@@ -16,11 +16,14 @@ Rails.application.routes.draw do
     get :signout
   end
 
-  resources :credits, only: [:new, :show] do
+  resources :credits do
     collection do
+      get 'index'
+      get 'complete', to: 'credits#complete'
+      post 'payment', to: 'credits#payment'
       post 'show', to: 'credits#show'
       post 'pay', to: 'credits#pay'
-    post 'delete', to: 'credits#delete'
+      post 'delete', to: 'credits#delete'
     end
   end
 end

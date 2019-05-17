@@ -31,9 +31,9 @@
         .buy-container-inner
           %h3.delivery 配送先
           %p.adress-user-info
-            〒123-1234
+            〒150-0043
             %br
-            東京都東京市東京区東京町東京567-7
+            東京都渋谷区道玄坂２丁目２３−１２
             %br
             ユーザーネーム
           %a.buy-user-info-fix{href: "/"}変更する >
@@ -47,7 +47,9 @@
             - exp_month = @default_card_information.exp_month.to_s
             - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
             = exp_month + " / " + exp_year
-          %a.buy-user-info-fix{href: "/"}変更する >
+          = link_to complete_credits_path do
+            .buy-user-info-fix
+              変更する >
 
 
   = render 'shared/footer-logo'

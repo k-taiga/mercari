@@ -23,14 +23,11 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    @buyer = current_user
-    @seller = @item.user_id
-
-    card = Credit.where(user_id: current_user.id).first
-    #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
+   card = Credit.where(user_id: current_user.id).first
+    #テーブルからpayjpの顧客IDを検索
     if card.blank?
       #登録された情報がない場合にカード登録画面に移動
-      redirect_to controller: "credits", action: "new"
+      redirect_to controller: "credits",action: "new"
     else
       Payjp.api_key = 'sk_test_62a0e6d04e58fcfc575e196c'
       #保管した顧客IDでpayjpから情報取得
