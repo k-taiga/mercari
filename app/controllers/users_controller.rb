@@ -4,9 +4,15 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def signout
+  def edit
   end
 
+  def update
+  end
+
+  def signout
+  end  
+    
   def listing
     @items = Item.where(user_id: current_user.id)
   end
