@@ -1,0 +1,275 @@
+.credit__container {
+  float: left;
+  width: calc(100vw - 742px);
+  background-color: #fff;
+  height: 330px;
+
+  .chapter__header {
+    font-weight: bold;
+    padding: 8px 24px;
+    font-size: 24px;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+    &-index {
+      padding: 64px;
+      border-top: 1px solid #f5f5f5;
+       &-content {
+        font-size: 16px;
+        text-align: left;
+        font-weight: bold;
+        max-width: 320px;
+        margin: 0 auto;
+       }
+    }
+}
+
+// カード未登録
+.credit__registration {
+  float: left;
+  width: calc(100vw - 742px);
+  background-color: #fff;
+  height: 660px;
+
+  .chapter__header {
+    font-weight: bold;
+    padding: 8px 24px;
+    font-size: 24px;
+  }
+}
+
+.signup__inner {
+  border-top: 1px solid #f5f5f5;
+  height: 616px;
+  width: 700px;
+  padding: 64px;
+  display: block;
+
+  &__container {
+    max-width: 320px;
+    margin: 0 auto;
+    height: 487px;
+  }
+}
+
+.pay-input {
+  margin: 0;
+
+  .number {
+    width: 100%;
+    margin: 8px 0 0;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    min-height: 1.5em;
+  }
+}
+
+ul.pay-input_img {
+  margin: 8px 0 0;
+  font-size: 0;
+  width: 320px;
+  display: block;
+}
+
+li.pay{
+  height: 20px;
+  float: left;
+  padding: 0 4px;
+}
+
+img.card--image {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+}
+
+label.text {
+  margin: 0;
+  font-weight: 600;
+  display: inline-block;
+  float: left;
+}
+
+label.text-limit {
+  margin: 0;
+  font-weight: 600;
+  display: inline-block;
+  float: left;
+  padding-bottom: 10px;
+}
+
+
+span.form {
+  margin: 0;
+  display: inline-block;
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+  float: left;
+}
+.pay-num {
+  margin: 40px 0 0;
+  height: 136px;
+  display: inline-block;
+  background: #fff;
+  width: 320px;
+  position: relative;
+
+  select#exp_month, select#exp_year {
+    display: inline-block;
+    height: 48px;
+    width: 112px;
+    position: relative;
+    background: #fff;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    float: left;
+    margin: 10px 10px 0 0;
+    clear: both;
+  }
+}
+
+.expire-month {
+  text-align: center;
+  padding: 40px;
+  text-align: left;
+}
+
+.expire-year {
+  text-align: center;
+  padding: 30px;
+  text-align: left;
+}
+
+.cvc {
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  min-height: 1.5em;
+}
+.pay-code {
+  margin: 40px 0 0;
+  .pay-code_text {
+    margin: 8px 0 8px 150px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0099e8;
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+  }
+  span.card {
+    float: right;
+    color: #0099e8;
+    margin: 8px 0 0;
+  }
+}
+
+ add
+// カード登録済み
+
+
+.payment__box-content {
+  display: block;
+  color: #0099e8;
+  font-size: 14px;
+  text-align: right;
+  text-decoration: none;
+  margin: 40px 0 0;
+}
+
+section.user__card {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user__card-btn {
+
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 16px;
+  max-width: 320px;
+  text-align: left;
+}
+
+.user__card-btn{
+  line-height: 20px;
+}
+
+section.user__card {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+section.user__card form{
+  max-width: 450px;
+}
+
+section.user__card input {
+  float: right;
+}
+
+button.delete {
+  float: right;
+  position: relative;
+  padding: 4px 6px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ea352d;
+  color: #ea352d;
+  cursor: pointer;
+}
+
+// カード追加
+.add__card-btn {
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.add__card-btn-default {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.payment__box-content {
+  display: block;
+  margin: 40px 0 0;
+  text-align: right;
+}
+
+.add__card-bottun {
+    padding-top: 24px;
+}

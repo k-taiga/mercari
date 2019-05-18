@@ -21,7 +21,7 @@
         .mypage-nav__list--item
           出品する
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
-      = link_to listing_user_path do
+      = link_to listing_user_path (@user.id) do
         .mypage-nav__list--item
           出品した商品-出品中
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
@@ -76,6 +76,7 @@
         .mypage-nav__list--item
           住所変更
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
+      = link_to credits_path do
         .mypage-nav__list--item
           支払い方法
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
@@ -83,11 +84,11 @@
         .mypage-nav__list--item
           メール/パスワード
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
-      = link_to edit_user_registration_path do
+      = link_to edit_user_path (@user.id) do
         .mypage-nav__list--item
           本人情報
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
-      = link_to "" do
+      = link_to edit_user_path (@user.id) do
         .mypage-nav__list--item
           電話番号の確認
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"

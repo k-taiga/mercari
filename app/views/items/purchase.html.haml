@@ -1,0 +1,29 @@
+.item__container
+  =render 'shared/header-logo'
+%section.pickup-container
+  %main.item__container__main
+    %section.item__container__main__box
+      %h2.item__box__header 購入が完了しました
+      %section.item__box__inner
+        .item__box__list
+          %h3.item-image
+            = image_tag( @item.item_images[0].image , alt: "" , class: "show-item-box__image")
+          %P.item-name
+            = @item.name
+          %div
+            .price-box
+              %p.item-price
+                = number_to_currency( "#{@item.price}", locale: 'jp')
+              %p.item-fee 送料込み
+
+      %section.user__info
+        .buy-container-inner
+          %h3.delivery 配送先
+          %p.adress-user-info
+            〒150-0043
+            %br
+            東京都渋谷区道玄坂２丁目２３−１２ フォンティスビル7F
+            %br
+            TECH-EXPERT ライフコーチ 横倉様
+
+  = render 'shared/footer-logo'

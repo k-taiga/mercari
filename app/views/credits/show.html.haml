@@ -1,0 +1,30 @@
+.main_header
+  = render 'shared/header'
+  - breadcrumb :user_card
+  = breadcrumbs pretext: " ", separator: " › "
+%section.pickup-container
+  .mypage-body.clearfix
+    = render 'shared/user-side'
+
+    .credit__container
+      %h2.chapter__header 支払い方法
+      .credit__container-index
+        %section
+          %h3.credit__container-index-content クレジットカード一覧
+        %section.user__card
+          = form_tag( delete_credits_path, method: :post, id: 'charge-form',  name: "inputForm") do
+            %input{ type: "hidden", name: "card_id", value: "" }
+            %button.delete 削除する
+          .user__card-btn
+            = "**** **** **** " + @default_card_information.last4
+            %br
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
+        %section
+          = link_to '/', class: "payment__box-content" do
+            %span 支払い方法について
+            = fa_icon "angle-right"
+
+  = render 'shared/footer'
+  = render 'shared/sell-button'
