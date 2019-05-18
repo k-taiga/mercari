@@ -21,7 +21,7 @@
         .mypage-nav__list--item
           出品する
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
-      = link_to listing_user_path (@user.id) do
+      = link_to listing_user_path do
         .mypage-nav__list--item
           出品した商品-出品中
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
@@ -68,7 +68,7 @@
     %h3.mypage-nav__head
       設定
     %ul.mypage-nav__list
-      = link_to edit_user_path (@user.id) do
+      = link_to edit_user_path do
         .mypage-nav__list--item
           プロフィール
           = fa_icon "angle-right", class: "mypage-nav__list--arrow"
