@@ -1,0 +1,13 @@
+.main_header
+  = render 'shared/header'
+  - breadcrumb :user_card
+  = breadcrumbs pretext: " ", separator: " › "
+%section.pickup-container
+  .mypage-body.clearfix
+    = render 'shared/user-side'
+    .credit__registration
+      %h2.chapter__header クレジットカード情報入力
+      = render 'shared/credit'
+
+  = render 'shared/footer'
+  = render 'shared/sell-button'

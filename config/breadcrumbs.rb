@@ -24,7 +24,7 @@ crumb :user_edit do
   parent :user
 end
 crumb :user_card do
-  link "支払い方法", credit_cards_path
+  link "支払い方法"
   parent :user
 end
 crumb :card_edit do
