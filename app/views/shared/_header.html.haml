@@ -125,7 +125,7 @@
           %i.fas.fa-check
             = link_to 'やることリスト'
         %li.header-nav-use--mypage
-          = link_to 'http://3.16.201.36/users/params[:id]' do
+          = link_to user_path(id: current_user.id) do
             %figure
               = image_tag 'https://static.mercdn.net/members/470676864.jpg?1500122515'
               マイページ

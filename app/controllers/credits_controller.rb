@@ -3,11 +3,13 @@ class CreditsController < ApplicationController
   require "payjp"
 
   def new
+    @user = current_user
     card = Credit.where(user_id: current_user.id)
     redirect_to action: "show" if card.exists?
   end
 
   def index
+    @user = current_user
   end
 
   def payment
@@ -57,6 +59,7 @@ class CreditsController < ApplicationController
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します
+  @user = current_user
   card = Credit.where(user_id: current_user.id).first
     if card.blank?
       redirect_to action: "new"

@@ -11,8 +11,8 @@ class UsersController < ApplicationController
   end
 
   def signout
-  end  
-    
+  end
+
   def listing
     @items = Item.where(user_id: current_user.id)
   end
