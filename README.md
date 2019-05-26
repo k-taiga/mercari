@@ -2,28 +2,36 @@
 
 ## DB構成
 
-## userテーブル
+## user
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
 |telephone|integer|null: false, unique: true|
 |email|string|null: false|
 |password|string|null: false|
-|birth_year|integer|
-|birth_month|integer|
-|birth_day|integer|
+|birth_year|integer|null: false|
+|birth_month|integer|null: false|
+|birth_day|integer|null: false|
 |icon_picture|string|
 |profile|text|
 |background_image|string|
 |point|integer|
+|uid|integer|
+|provider|integer|
+|family_name_kanji|string|null: false|
+|first_name_kanji|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
+|zip_code|integer|
+|prefecture|string|
+|city|string|
+|address1|string|
+|address2|string|
 
 ## Association
-* has_many :buyer_products, class_name: 'Product', :foreign_key => 'buyer_id'
-* has_many :seller_products, class_name: 'Product', :foreign_key => 'seller_id'
 * has_many :user_evalutions
 * has_many :evalutions, through: :user_evalutions
 * has_one :credit
-* has_one :address
 * has_many :sns_credentials
 
 ## user_evaluation
@@ -33,8 +41,8 @@
 |evaluation_id|references|foreign_key|
 
 ## Association
-* has_many :user
-* has_many :evaluation
+* has_many :users
+* has_many :evaluations
 
 ## evaluation
 |Column|Type|Options|
@@ -42,14 +50,14 @@
 |value|string|null: false|
 
 ## Association
-* has_many :user_evalutions
-* has_many :users, through: :user_evalutions
+* has_many :user_evalutaions
+* has_many :users, through: :user_evaluations
 
 ## sns_credential
 |Column|Type|Options|
 |------|----|-------|
-|uid|string|null: false|
-|provider|string|null: false|
+|uid|string|
+|provider|string|
 |user_id|references|foreign_key|
 
 ## Association
@@ -58,27 +66,8 @@
 ## credit
 |Column|Type|Options|
 |------|----|-------|
-|card_number|string|null: false, unique: true|
-|expiration_month|integer|null: false|
-|expiration_year|integer|null: false|
-|security_code|integer|null: false|
-|user_id|references|foreign_key|
-
-## Association
-* belongs_to :user
-
-## address
-|Column|Type|Options|
-|------|----|-------|
-|postal_code|integer|null: false|
-|prefecture|integer|null: false|
-|municipality|string|null: false|
-|address_number|string|null: false|
-|building_name|string|
-|first_name|string|null: false|
-|last_name|string|null: false|
-|fist_name_phonetic|string|null: false|
-|last_name_phonetic|string|null: false|
+|customer_id|references|null: false|
+|card_id|references|null: false|
 |user_id|references|foreign_key|
 
 ## Association
@@ -95,52 +84,44 @@
 * belongs_to :user
 * belongs_to :product
 
-## product
+## items
 |Column|Type|Options|
 |------|----|-------|
-|seller_id|references|foreign_key, class_name: "User"|
-|buyer_id|references|foreign_key, class_name: "User"|
 |name|string|null: false|
 |info|text|null: false|
-|price|integer|null: false|
-|category_id|references|foreign_key|
-|brand_id|references|foreign_key|
-|size_id|references|foreign_key|
+|category_id|references|null: false, foreign_key|
+|brand_id|references|optional: true, foreign_key|
+|size|string|null: false|
 |status|string|null: false|
-|delivery_fee_owner|string|null: false|
+|price|integer|null: false|
+|delivery_cost|string|null: false|
 |precfecture|integer|null: false|
 |delivery_date|string|null: false|
-|sell_status_id|references|foreign_key|
-|shipping_method|string|null: false|
-|image_id|references|foreign_key|
+|user_id|references|null: false, foreign_key|
 
 ## Association
-* belongs_to :buyer, class_name: 'User', :foreign_key => 'buyer_id'
-* belongs_to :seller, class_name: 'User', :foreign_key => 'seller_id'
+* belongs_to :user
 * belongs_to :category
 * belongs_to :brand
-* belongs_to :size_status
-* belongs_to :sell_status
-* has_many :images
+* has_many: item_images
 
-## image
+## item_image
 |Column|Type|Options|
 |------|----|-------|
-|product_id|references|foreign_key|
+|item_id|references|foreign_key|
 |image|string|
 
 ## Association
-* belongs_to :product
+* belongs_to :item
 
 ## category
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |ancestry|string|index: true|
-|belongs|string|null: false|
 
 ## Association
-* has_many :products
+* has_many :items
 * has_ancestry
 
 ## brand
@@ -149,30 +130,6 @@
 |name|string|null: false|
 
 ## Association
-* has_many :products
+* has_many :items
 
-## sell_status
-|Column|Type|Options|
-|------|----|-------|
-|status|integer|null: false|
 
-## Association
-* has_many :products
-
-## size
-|Column|Type|Options|
-|------|----|-------|
-|size|string|null: false|
-|size_group_id|references|foreign_key|
-
-## Association
-* has_many :products
-* belongs_to :size_group
-
-## size_group
-|Column|Type|Options|
-|------|----|-------|
-|group|string|null: false|
-
-## Association
-* has_many :sizes
